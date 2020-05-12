@@ -3,10 +3,11 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0A2EAF08246B5BF900A2FE15 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0A2EAF07246B5BF900A2FE15 /* GoogleService-Info.plist */; };
 		0A30B3502469F561006E3B3B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A30B34F2469F561006E3B3B /* AppDelegate.swift */; };
 		0A30B3522469F562006E3B3B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A30B3512469F562006E3B3B /* SceneDelegate.swift */; };
 		0A30B3542469F562006E3B3B /* MenusPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A30B3532469F562006E3B3B /* MenusPageViewController.swift */; };
@@ -15,9 +16,15 @@
 		0A30B35B2469F562006E3B3B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0A30B35A2469F562006E3B3B /* Assets.xcassets */; };
 		0A30B35E2469F562006E3B3B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0A30B35C2469F562006E3B3B /* LaunchScreen.storyboard */; };
 		0A30B3662469F5A2006E3B3B /* MenuPageContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A30B3652469F5A2006E3B3B /* MenuPageContentViewController.swift */; };
+		0A85A54A246B170100770EA7 /* burger-plain.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 0A85A549246B170100770EA7 /* burger-plain.jpg */; };
+		0A85A54E246B185E00770EA7 /* MenuItemDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A85A54D246B185E00770EA7 /* MenuItemDetailViewController.swift */; };
+		0A85A550246B1BF500770EA7 /* LoginPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A85A54F246B1BF500770EA7 /* LoginPageViewController.swift */; };
+		0A85A552246B201E00770EA7 /* Restaurant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A85A551246B201E00770EA7 /* Restaurant.swift */; };
+		54F4B2BF097331DD844A90E4 /* Pods_RoseEats.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9EA667BC00B12E717705564A /* Pods_RoseEats.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0A2EAF07246B5BF900A2FE15 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "GoogleService-Info.plist"; sourceTree = SOURCE_ROOT; };
 		0A30B34C2469F561006E3B3B /* RoseEats.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RoseEats.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0A30B34F2469F561006E3B3B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0A30B3512469F562006E3B3B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -28,6 +35,13 @@
 		0A30B35D2469F562006E3B3B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0A30B35F2469F562006E3B3B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0A30B3652469F5A2006E3B3B /* MenuPageContentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuPageContentViewController.swift; sourceTree = "<group>"; };
+		0A85A549246B170100770EA7 /* burger-plain.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "burger-plain.jpg"; sourceTree = "<group>"; };
+		0A85A54D246B185E00770EA7 /* MenuItemDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuItemDetailViewController.swift; sourceTree = "<group>"; };
+		0A85A54F246B1BF500770EA7 /* LoginPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPageViewController.swift; sourceTree = "<group>"; };
+		0A85A551246B201E00770EA7 /* Restaurant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Restaurant.swift; sourceTree = "<group>"; };
+		30AA1FB03B960060BE9095AA /* Pods-RoseEats.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RoseEats.debug.xcconfig"; path = "Target Support Files/Pods-RoseEats/Pods-RoseEats.debug.xcconfig"; sourceTree = "<group>"; };
+		3657A7C5B3C8B2FD496BD5A9 /* Pods-RoseEats.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RoseEats.release.xcconfig"; path = "Target Support Files/Pods-RoseEats/Pods-RoseEats.release.xcconfig"; sourceTree = "<group>"; };
+		9EA667BC00B12E717705564A /* Pods_RoseEats.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RoseEats.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,6 +49,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				54F4B2BF097331DD844A90E4 /* Pods_RoseEats.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -46,6 +61,8 @@
 			children = (
 				0A30B34E2469F561006E3B3B /* RoseEats */,
 				0A30B34D2469F561006E3B3B /* Products */,
+				E98817D832F8EAF192C87189 /* Pods */,
+				A0630A23BEEF7481813951EB /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -60,6 +77,8 @@
 		0A30B34E2469F561006E3B3B /* RoseEats */ = {
 			isa = PBXGroup;
 			children = (
+				0A85A54C246B174B00770EA7 /* FoodImagas */,
+				0A85A54B246B174300770EA7 /* Models */,
 				0A30B34F2469F561006E3B3B /* AppDelegate.swift */,
 				0A30B3512469F562006E3B3B /* SceneDelegate.swift */,
 				0A30B3532469F562006E3B3B /* MenusPageViewController.swift */,
@@ -68,9 +87,45 @@
 				0A30B35A2469F562006E3B3B /* Assets.xcassets */,
 				0A30B35C2469F562006E3B3B /* LaunchScreen.storyboard */,
 				0A30B35F2469F562006E3B3B /* Info.plist */,
+				0A2EAF07246B5BF900A2FE15 /* GoogleService-Info.plist */,
 				0A30B3652469F5A2006E3B3B /* MenuPageContentViewController.swift */,
+				0A85A54D246B185E00770EA7 /* MenuItemDetailViewController.swift */,
+				0A85A54F246B1BF500770EA7 /* LoginPageViewController.swift */,
 			);
 			path = RoseEats;
+			sourceTree = "<group>";
+		};
+		0A85A54B246B174300770EA7 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				0A85A551246B201E00770EA7 /* Restaurant.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		0A85A54C246B174B00770EA7 /* FoodImagas */ = {
+			isa = PBXGroup;
+			children = (
+				0A85A549246B170100770EA7 /* burger-plain.jpg */,
+			);
+			path = FoodImagas;
+			sourceTree = "<group>";
+		};
+		A0630A23BEEF7481813951EB /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9EA667BC00B12E717705564A /* Pods_RoseEats.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E98817D832F8EAF192C87189 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				30AA1FB03B960060BE9095AA /* Pods-RoseEats.debug.xcconfig */,
+				3657A7C5B3C8B2FD496BD5A9 /* Pods-RoseEats.release.xcconfig */,
+			);
+			path = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -80,9 +135,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0A30B3622469F562006E3B3B /* Build configuration list for PBXNativeTarget "RoseEats" */;
 			buildPhases = (
+				41DEE349444DA73044BB22E8 /* [CP] Check Pods Manifest.lock */,
 				0A30B3482469F561006E3B3B /* Sources */,
 				0A30B3492469F561006E3B3B /* Frameworks */,
 				0A30B34A2469F561006E3B3B /* Resources */,
+				733DF9B4E68732D6A95244CC /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -133,11 +190,55 @@
 			files = (
 				0A30B35E2469F562006E3B3B /* LaunchScreen.storyboard in Resources */,
 				0A30B35B2469F562006E3B3B /* Assets.xcassets in Resources */,
+				0A2EAF08246B5BF900A2FE15 /* GoogleService-Info.plist in Resources */,
 				0A30B3592469F562006E3B3B /* Main.storyboard in Resources */,
+				0A85A54A246B170100770EA7 /* burger-plain.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		41DEE349444DA73044BB22E8 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-RoseEats-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		733DF9B4E68732D6A95244CC /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-RoseEats/Pods-RoseEats-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-RoseEats/Pods-RoseEats-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-RoseEats/Pods-RoseEats-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		0A30B3482469F561006E3B3B /* Sources */ = {
@@ -145,9 +246,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				0A30B3562469F562006E3B3B /* ProfileViewController.swift in Sources */,
+				0A85A54E246B185E00770EA7 /* MenuItemDetailViewController.swift in Sources */,
 				0A30B3542469F562006E3B3B /* MenusPageViewController.swift in Sources */,
 				0A30B3662469F5A2006E3B3B /* MenuPageContentViewController.swift in Sources */,
+				0A85A552246B201E00770EA7 /* Restaurant.swift in Sources */,
 				0A30B3502469F561006E3B3B /* AppDelegate.swift in Sources */,
+				0A85A550246B1BF500770EA7 /* LoginPageViewController.swift in Sources */,
 				0A30B3522469F562006E3B3B /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -290,6 +394,7 @@
 		};
 		0A30B3632469F562006E3B3B /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 30AA1FB03B960060BE9095AA /* Pods-RoseEats.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -307,6 +412,7 @@
 		};
 		0A30B3642469F562006E3B3B /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3657A7C5B3C8B2FD496BD5A9 /* Pods-RoseEats.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
