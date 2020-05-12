@@ -40,7 +40,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1354" y="1432"/>
+            <point key="canvasLocation" x="277" y="1104"/>
         </scene>
         <!--Menus-->
         <scene sceneID="bFe-ur-9pF">
@@ -50,7 +50,7 @@
                 </pageViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IIE-y6-pAe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1872" y="-64"/>
+            <point key="canvasLocation" x="-562" y="321"/>
         </scene>
         <!--Menu Page Content View Controller-->
         <scene sceneID="MW0-5o-U1O">
@@ -60,27 +60,74 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aUQ-Tj-foG">
-                                <rect key="frame" x="67" y="255" width="257" height="144"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Restaurant Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aUQ-Tj-foG">
+                                <rect key="frame" x="20" y="64" width="374" height="29"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Vrq-GC-qeN">
+                                <rect key="frame" x="20" y="121" width="374" height="664"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="MenuItemCell" id="Lvr-Rh-N8M" customClass="MenuTableCell" customModule="RoseEats" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="374" height="85.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Lvr-Rh-N8M" id="bO5-6U-ttw">
+                                            <rect key="frame" x="0.0" y="0.0" width="343" height="85.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="F2s-nI-rPF">
+                                                    <rect key="frame" x="20" y="20" width="58" height="45.5"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="45" id="TdO-2B-9VT"/>
+                                                        <constraint firstAttribute="width" constant="58" id="hiy-ws-BbV"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="spS-uI-512">
+                                                    <rect key="frame" x="92" y="32" width="182" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="bottom" secondItem="F2s-nI-rPF" secondAttribute="bottom" constant="20" symbolic="YES" id="3LD-af-JCd"/>
+                                                <constraint firstItem="F2s-nI-rPF" firstAttribute="leading" secondItem="bO5-6U-ttw" secondAttribute="leading" constant="20" symbolic="YES" id="KPM-zM-VTP"/>
+                                                <constraint firstItem="F2s-nI-rPF" firstAttribute="top" secondItem="bO5-6U-ttw" secondAttribute="top" constant="20" symbolic="YES" id="KtX-HL-Wlb"/>
+                                                <constraint firstItem="spS-uI-512" firstAttribute="centerX" secondItem="bO5-6U-ttw" secondAttribute="centerX" id="gDX-Yf-HOP"/>
+                                                <constraint firstItem="spS-uI-512" firstAttribute="centerY" secondItem="bO5-6U-ttw" secondAttribute="centerY" id="qkp-93-aei"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="menuItemImageView" destination="F2s-nI-rPF" id="9Zp-cn-Esr"/>
+                                            <outlet property="menuItemLabel" destination="spS-uI-512" id="W2e-Tm-Vwk"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="aUQ-Tj-foG" firstAttribute="centerY" secondItem="13q-3h-YhA" secondAttribute="centerY" id="3fX-In-FmS"/>
-                            <constraint firstItem="aUQ-Tj-foG" firstAttribute="centerX" secondItem="13q-3h-YhA" secondAttribute="centerX" id="Dw1-Xg-4mk"/>
+                            <constraint firstItem="aUQ-Tj-foG" firstAttribute="top" secondItem="13q-3h-YhA" secondAttribute="top" constant="20" id="3Zd-pb-HF1"/>
+                            <constraint firstItem="aUQ-Tj-foG" firstAttribute="leading" secondItem="13q-3h-YhA" secondAttribute="leading" constant="20" id="7or-Zz-W0o"/>
+                            <constraint firstItem="13q-3h-YhA" firstAttribute="trailing" secondItem="Vrq-GC-qeN" secondAttribute="trailing" constant="20" id="KUo-hf-78H"/>
+                            <constraint firstItem="Vrq-GC-qeN" firstAttribute="centerX" secondItem="13q-3h-YhA" secondAttribute="centerX" id="N4M-xK-hIg"/>
+                            <constraint firstItem="13q-3h-YhA" firstAttribute="trailing" secondItem="aUQ-Tj-foG" secondAttribute="trailing" constant="20" id="Prd-3p-Wna"/>
+                            <constraint firstItem="Vrq-GC-qeN" firstAttribute="centerY" secondItem="13q-3h-YhA" secondAttribute="centerY" id="omb-YH-abo"/>
+                            <constraint firstItem="Vrq-GC-qeN" firstAttribute="top" secondItem="aUQ-Tj-foG" secondAttribute="bottom" constant="28" id="xIj-VR-SH2"/>
+                            <constraint firstItem="Vrq-GC-qeN" firstAttribute="leading" secondItem="13q-3h-YhA" secondAttribute="leading" constant="20" id="zaV-cn-sBL"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="13q-3h-YhA"/>
                     </view>
                     <connections>
+                        <outlet property="tableView" destination="Vrq-GC-qeN" id="Oyz-Pj-cUw"/>
                         <outlet property="titleLabel" destination="aUQ-Tj-foG" id="guT-4h-8sc"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uoZ-X5-LGm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1033.3333333333335" y="-141.29464285714286"/>
+            <point key="canvasLocation" x="50.724637681159422" y="176.78571428571428"/>
         </scene>
         <!--Profile-->
         <scene sceneID="wg7-f3-ORb">
@@ -115,7 +162,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1965" y="719"/>
+            <point key="canvasLocation" x="-655" y="1104"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="yl2-sM-qoP">
@@ -133,7 +180,7 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HuB-VB-40B" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2772" y="98"/>
+            <point key="canvasLocation" x="-1462" y="483"/>
         </scene>
     </scenes>
     <resources>
