@@ -1,0 +1,6 @@
+framework module Pods_RoseEats {
+  umbrella header "Pods-RoseEats-umbrella.h"
+
+  export *
+  module * { export * }
+}
