@@ -16,8 +16,8 @@ class MenusPageViewController: UIPageViewController, UIPageViewControllerDataSou
         {
             return nil
         }
-        index -= 1;
-        return getViewControllerAtIndex(index: index)
+        index! -= 1;
+        return getViewControllerAtIndex(index: index!)
     }
     
     func pageViewController(_ pageViewController: UIPageViewController, viewControllerAfter viewController: UIViewController) -> UIViewController? {
@@ -27,12 +27,12 @@ class MenusPageViewController: UIPageViewController, UIPageViewControllerDataSou
         {
             return nil;
         }
-        index += 1;
+        index! += 1;
         if (index == arrPageTitle.count)
         {
             return nil;
         }
-        return getViewControllerAtIndex(index: index)
+        return getViewControllerAtIndex(index: index!)
     }
     
 
@@ -41,7 +41,7 @@ class MenusPageViewController: UIPageViewController, UIPageViewControllerDataSou
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        arrPageTitle = ["Chauncey's", "Rose Garden", "Beanies", "Moench Cafe"]
+        arrPageTitle = ["Beanies", "Chauncey's", "Moench Cafe", "Rose Garden"]
         self.dataSource = self
         self.setViewControllers([getViewControllerAtIndex(index: 0)] as [UIViewController], direction: UIPageViewController.NavigationDirection.forward, animated: false, completion: nil)
 
