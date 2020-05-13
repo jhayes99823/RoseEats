@@ -12,7 +12,7 @@ class MenuItemDetailViewController: UIViewController {
     
     @IBOutlet weak var testLabel: UILabel!
     
-    var restaurant: Restaurant?
+    var menuItem: MenuItem?
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -20,6 +20,7 @@ class MenuItemDetailViewController: UIViewController {
     }
     
     func updateView() {
-        testLabel.text = restaurant?.name
+        testLabel.text = menuItem?.Name
+        
     }
 }

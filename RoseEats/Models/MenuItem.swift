@@ -1,5 +1,5 @@
 //
-//  Restaurant.swift
+//  MenuItem.swift
 //  RoseEats
 //
 //  Created by CSSE Department on 5/12/20.
@@ -9,15 +9,17 @@
 import Foundation
 import Firebase
 
-class Restaurant {
-    var name: String!
-    var location: String!
+class MenuItem {
     var id: String!
-
+    var Name: String!
+    var Price: Int!
+    var WhereServed: [String]!
+    
     init(documentSnapShot: DocumentSnapshot) {
         self.id = documentSnapShot.documentID
         let data = documentSnapShot.data()!
-        self.name = data["Name"] as? String
-        self.location = data["Location"] as? String
+        self.Name = (data["Name"] as! String)
+        self.Price = data["Location"] as? Int
+        self.WhereServed = data["WhereServed"] as? [String]
     }
 }

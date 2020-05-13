@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		0A2EAF08246B5BF900A2FE15 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0A2EAF07246B5BF900A2FE15 /* GoogleService-Info.plist */; };
+		0A2EAF0A246B769400A2FE15 /* MenuItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A2EAF09246B769400A2FE15 /* MenuItem.swift */; };
 		0A30B3502469F561006E3B3B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A30B34F2469F561006E3B3B /* AppDelegate.swift */; };
 		0A30B3522469F562006E3B3B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A30B3512469F562006E3B3B /* SceneDelegate.swift */; };
 		0A30B3542469F562006E3B3B /* MenusPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A30B3532469F562006E3B3B /* MenusPageViewController.swift */; };
@@ -25,6 +26,7 @@
 
 /* Begin PBXFileReference section */
 		0A2EAF07246B5BF900A2FE15 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "GoogleService-Info.plist"; sourceTree = SOURCE_ROOT; };
+		0A2EAF09246B769400A2FE15 /* MenuItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuItem.swift; sourceTree = "<group>"; };
 		0A30B34C2469F561006E3B3B /* RoseEats.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RoseEats.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0A30B34F2469F561006E3B3B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0A30B3512469F562006E3B3B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -99,6 +101,7 @@
 			isa = PBXGroup;
 			children = (
 				0A85A551246B201E00770EA7 /* Restaurant.swift */,
+				0A2EAF09246B769400A2FE15 /* MenuItem.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -251,6 +254,7 @@
 				0A30B3662469F5A2006E3B3B /* MenuPageContentViewController.swift in Sources */,
 				0A85A552246B201E00770EA7 /* Restaurant.swift in Sources */,
 				0A30B3502469F561006E3B3B /* AppDelegate.swift in Sources */,
+				0A2EAF0A246B769400A2FE15 /* MenuItem.swift in Sources */,
 				0A85A550246B1BF500770EA7 /* LoginPageViewController.swift in Sources */,
 				0A30B3522469F562006E3B3B /* SceneDelegate.swift in Sources */,
 			);

@@ -23,9 +23,13 @@ class MenuPageContentViewController: UIViewController, UITableViewDelegate, UITa
     
     let animals: [String] = ["Horse", "Cow", "Camel", "Sheep", "Goat"]
     var restaurants = [Restaurant]()
+    var menuItems = [MenuItem]()
     
     var restaurantRef: CollectionReference!
     var restaurantListener: ListenerRegistration!
+    
+    var menuItemRef: CollectionReference!
+    var menuItemListener: ListenerRegistration!
     
     var pageIndex: Int!
     var strTitle: String!
@@ -34,11 +38,15 @@ class MenuPageContentViewController: UIViewController, UITableViewDelegate, UITa
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+                
         restaurantRef = Firestore.firestore().collection("Restaurant")
+        menuItemRef = Firestore.firestore().collection("MenuItem")
         
         tableView.delegate = self
         tableView.dataSource = self
+        
+//        tableView.register(MenuTableCell.self, forCellReuseIdentifier: menuPageTableCellID)
+
         titleLabel.text = strTitle
     }
     
@@ -57,6 +65,14 @@ class MenuPageContentViewController: UIViewController, UITableViewDelegate, UITa
                        return
                    }
                }
+        menuItemRef.whereField("WhereServed", arrayContains: self.strTitle!).getDocuments { (querySnapShot, error) in
+            self.menuItems.removeAll()
+            querySnapShot?.documents.forEach({ (docSnapShot) in
+                self.menuItems.append(MenuItem(documentSnapShot: docSnapShot))
+            }
+            )
+            self.tableView.reloadData()
+        }
     }
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -65,13 +81,13 @@ class MenuPageContentViewController: UIViewController, UITableViewDelegate, UITa
        }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return self.animals.count
+        return self.menuItems.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: menuPageTableCellID) as! MenuTableCell
         
-        cell.menuItemLabel?.text = self.animals[indexPath.row]
+        cell.menuItemLabel?.text = self.menuItems[indexPath.row].Name
         cell.menuItemImageView?.image = UIImage(named: "burger-plain.jpg")
                 
         return cell
@@ -79,8 +95,8 @@ class MenuPageContentViewController: UIViewController, UITableViewDelegate, UITa
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == menuDetailpageSegue {
-            if tableView.indexPathForSelectedRow != nil {
-                (segue.destination as! MenuItemDetailViewController).restaurant = restaurants[self.pageIndex]
+            if let indexPath = tableView.indexPathForSelectedRow {
+                (segue.destination as! MenuItemDetailViewController).menuItem = menuItems[indexPath.row]
             }
         }
     }
