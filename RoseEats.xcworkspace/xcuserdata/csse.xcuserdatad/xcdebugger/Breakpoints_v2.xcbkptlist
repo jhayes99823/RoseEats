@@ -14,10 +14,118 @@
             filePath = "RoseEats/MenuPageContentViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "89"
-            endingLineNumber = "89"
+            startingLineNumber = "91"
+            endingLineNumber = "91"
             landmarkName = "tableView(_:cellForRowAt:)"
             landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "9D426360-DCAC-4102-8709-C1072C320F19"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "RoseEats/MenuPageContentViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "31"
+            endingLineNumber = "31"
+            landmarkName = "MenuPageContentViewController"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  uuid = "9D426360-DCAC-4102-8709-C1072C320F19 - 31c2039cd2215c95"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "RoseEats.MenuPageContentViewController.menuItemRef.getter : Swift.Optional&lt;__C.FIRCollectionReference&gt;"
+                  moduleName = "RoseEats"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/csse/Desktop/RoseEats/RoseEats/MenuPageContentViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "31"
+                  endingLineNumber = "31"
+                  offsetFromSymbolStart = "126">
+               </Location>
+               <Location
+                  uuid = "9D426360-DCAC-4102-8709-C1072C320F19 - c40ca3edfecabe1"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "RoseEats.MenuPageContentViewController.menuItemRef.setter : Swift.Optional&lt;__C.FIRCollectionReference&gt;"
+                  moduleName = "RoseEats"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/csse/Desktop/RoseEats/RoseEats/MenuPageContentViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "31"
+                  endingLineNumber = "31"
+                  offsetFromSymbolStart = "160">
+               </Location>
+               <Location
+                  uuid = "9D426360-DCAC-4102-8709-C1072C320F19 - 42a408d859119ed0"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "RoseEats.MenuPageContentViewController.menuItemRef.modify : Swift.Optional&lt;__C.FIRCollectionReference&gt;"
+                  moduleName = "RoseEats"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/csse/Desktop/RoseEats/RoseEats/MenuPageContentViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "18">
+               </Location>
+               <Location
+                  uuid = "9D426360-DCAC-4102-8709-C1072C320F19 - 96e6194a852821c3"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "RoseEats.MenuPageContentViewController.menuItemRef.modify : Swift.Optional&lt;__C.FIRCollectionReference&gt; with unmangled suffix &quot;.resume.0&quot;"
+                  moduleName = "RoseEats"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/csse/Desktop/RoseEats/RoseEats/MenuPageContentViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "31"
+                  endingLineNumber = "31"
+                  offsetFromSymbolStart = "4">
+               </Location>
+               <Location
+                  uuid = "9D426360-DCAC-4102-8709-C1072C320F19 - 53481ed1d99ad662"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "RoseEats.MenuPageContentViewController.init(nibName: Swift.Optional&lt;Swift.String&gt;, bundle: Swift.Optional&lt;__C.NSBundle&gt;) -&gt; RoseEats.MenuPageContentViewController"
+                  moduleName = "RoseEats"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/csse/Desktop/RoseEats/RoseEats/MenuPageContentViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "31"
+                  endingLineNumber = "31"
+                  offsetFromSymbolStart = "1181">
+               </Location>
+               <Location
+                  uuid = "9D426360-DCAC-4102-8709-C1072C320F19 - 39122fda1e13b7b"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "RoseEats.MenuPageContentViewController.init(coder: __C.NSCoder) -&gt; Swift.Optional&lt;RoseEats.MenuPageContentViewController&gt;"
+                  moduleName = "RoseEats"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/csse/Desktop/RoseEats/RoseEats/MenuPageContentViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "31"
+                  endingLineNumber = "31"
+                  offsetFromSymbolStart = "1116">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

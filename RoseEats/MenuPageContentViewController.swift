@@ -42,6 +42,8 @@ class MenuPageContentViewController: UIViewController, UITableViewDelegate, UITa
         restaurantRef = Firestore.firestore().collection("Restaurant")
         menuItemRef = Firestore.firestore().collection("MenuItem")
         
+        navigationItem.backBarButtonItem = nil
+        
         tableView.delegate = self
         tableView.dataSource = self
         

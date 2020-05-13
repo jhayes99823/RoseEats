@@ -158,6 +158,7 @@
 				0A30B3492469F561006E3B3B /* Frameworks */,
 				0A30B34A2469F561006E3B3B /* Resources */,
 				733DF9B4E68732D6A95244CC /* [CP] Embed Pods Frameworks */,
+				856007EBFAFC8E99BE3B822B /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -258,6 +259,23 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-RoseEats/Pods-RoseEats-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		856007EBFAFC8E99BE3B822B /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-RoseEats/Pods-RoseEats-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-RoseEats/Pods-RoseEats-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-RoseEats/Pods-RoseEats-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */

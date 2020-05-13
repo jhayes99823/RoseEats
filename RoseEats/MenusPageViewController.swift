@@ -40,7 +40,7 @@ class MenusPageViewController: UIPageViewController, UIPageViewControllerDataSou
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        navigationItem.backBarButtonItem = nil
         arrPageTitle = ["Beanies", "Chauncey's", "Moench Cafe", "Rose Garden"]
         self.dataSource = self
         self.setViewControllers([getViewControllerAtIndex(index: 0)] as [UIViewController], direction: UIPageViewController.NavigationDirection.forward, animated: false, completion: nil)
