@@ -121,28 +121,77 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Detail View Page" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3le-lB-Er7">
-                                <rect key="frame" x="186" y="191" width="128" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="K7r-6Z-6Ah">
+                                <rect key="frame" x="20" y="94" width="374" height="203"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="203" id="sRs-rx-Qyf"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LFM-CR-jqm">
+                                <rect key="frame" x="155.5" y="763" width="103" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Add To Cart">
+                                    <color key="titleColor" systemColor="systemGrayColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="pressedAddToCart:" destination="R8r-2X-Hli" eventType="touchUpInside" id="QQD-PS-4Rx"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Detail View Page" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3le-lB-Er7">
+                                <rect key="frame" x="106.5" y="10.5" width="201" height="33.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="28"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Amount" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RNi-Vc-YZL">
+                                <rect key="frame" x="20" y="391" width="82.5" height="26.5"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="gVc-Ry-vkS">
+                                <rect key="frame" x="300" y="388" width="94" height="32"/>
+                                <connections>
+                                    <action selector="quantityStepperPressed:" destination="R8r-2X-Hli" eventType="valueChanged" id="9fx-WE-wDA"/>
+                                </connections>
+                            </stepper>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3cA-XI-KyK">
+                                <rect key="frame" x="274.5" y="390.5" width="10.5" height="27"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="3le-lB-Er7" firstAttribute="top" secondItem="Q5T-vf-eok" secondAttribute="top" constant="191" id="7D3-uD-gUq"/>
-                            <constraint firstItem="3le-lB-Er7" firstAttribute="leading" secondItem="Q5T-vf-eok" secondAttribute="leading" constant="186" id="rI3-yK-J4C"/>
+                            <constraint firstItem="K7r-6Z-6Ah" firstAttribute="leading" secondItem="XJJ-7A-ImG" secondAttribute="leadingMargin" id="6PZ-4x-sgW"/>
+                            <constraint firstItem="Q5T-vf-eok" firstAttribute="trailing" secondItem="gVc-Ry-vkS" secondAttribute="trailing" constant="20" id="9sw-x4-JOX"/>
+                            <constraint firstItem="3le-lB-Er7" firstAttribute="centerX" secondItem="Q5T-vf-eok" secondAttribute="centerX" id="Cu3-yv-7kn"/>
+                            <constraint firstItem="LFM-CR-jqm" firstAttribute="centerX" secondItem="Q5T-vf-eok" secondAttribute="centerX" id="VyT-ML-9Fh"/>
+                            <constraint firstItem="K7r-6Z-6Ah" firstAttribute="top" secondItem="XJJ-7A-ImG" secondAttribute="top" constant="94" id="WAF-pb-0bL"/>
+                            <constraint firstItem="Q5T-vf-eok" firstAttribute="bottom" secondItem="LFM-CR-jqm" secondAttribute="bottom" constant="9" id="aeG-lm-IL3"/>
+                            <constraint firstItem="3cA-XI-KyK" firstAttribute="centerY" secondItem="RNi-Vc-YZL" secondAttribute="centerY" id="cCg-zO-yU0"/>
+                            <constraint firstItem="RNi-Vc-YZL" firstAttribute="leading" secondItem="K7r-6Z-6Ah" secondAttribute="leading" id="nqm-ee-6DD"/>
+                            <constraint firstItem="K7r-6Z-6Ah" firstAttribute="top" secondItem="3le-lB-Er7" secondAttribute="bottom" constant="50" id="nyx-84-kp3"/>
+                            <constraint firstItem="K7r-6Z-6Ah" firstAttribute="centerX" secondItem="Q5T-vf-eok" secondAttribute="centerX" id="tb5-1L-EIf"/>
+                            <constraint firstItem="gVc-Ry-vkS" firstAttribute="centerY" secondItem="RNi-Vc-YZL" secondAttribute="centerY" id="twL-fM-qPm"/>
+                            <constraint firstItem="gVc-Ry-vkS" firstAttribute="leading" secondItem="3cA-XI-KyK" secondAttribute="trailing" constant="15" id="wl7-N6-jOa"/>
+                            <constraint firstItem="RNi-Vc-YZL" firstAttribute="centerY" secondItem="Q5T-vf-eok" secondAttribute="centerY" id="yUi-x7-hnE"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Q5T-vf-eok"/>
                     </view>
                     <navigationItem key="navigationItem" id="jcp-fl-h4v"/>
                     <connections>
-                        <outlet property="testLabel" destination="3le-lB-Er7" id="blQ-Ma-Epd"/>
+                        <outlet property="addToCartButton" destination="LFM-CR-jqm" id="jsn-r5-FSL"/>
+                        <outlet property="imageView" destination="K7r-6Z-6Ah" id="h0U-4m-tu1"/>
+                        <outlet property="pageTitle" destination="3le-lB-Er7" id="M3N-HM-VWs"/>
+                        <outlet property="quantityLabel" destination="3cA-XI-KyK" id="04h-Ui-civ"/>
+                        <outlet property="quantityStepper" destination="gVc-Ry-vkS" id="TmZ-vK-t5K"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yWp-Gh-02n" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="206" y="321"/>
+            <point key="canvasLocation" x="205.79710144927537" y="291.96428571428572"/>
         </scene>
         <!--Profile-->
         <scene sceneID="wg7-f3-ORb">

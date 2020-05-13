@@ -88,7 +88,7 @@ class MenuPageContentViewController: UIViewController, UITableViewDelegate, UITa
         let cell = tableView.dequeueReusableCell(withIdentifier: menuPageTableCellID) as! MenuTableCell
         
         cell.menuItemLabel?.text = self.menuItems[indexPath.row].Name
-        cell.menuItemImageView?.image = UIImage(named: "burger-plain.jpg")
+        cell.menuItemImageView?.image = UIImage(named: self.menuItems[indexPath.row].ImageName)
                 
         return cell
     }
