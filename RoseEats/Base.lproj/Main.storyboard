@@ -44,7 +44,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1321.7391304347827" y="1037.2767857142858"/>
+            <point key="canvasLocation" x="-909" y="775"/>
         </scene>
         <!--Menus-->
         <scene sceneID="bFe-ur-9pF">
@@ -54,7 +54,187 @@
                 </pageViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IIE-y6-pAe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-562" y="321"/>
+            <point key="canvasLocation" x="1023" y="625"/>
+        </scene>
+        <!--Figma Menu Page Content View Controller-->
+        <scene sceneID="w0w-Kb-u3h">
+            <objects>
+                <viewController storyboardIdentifier="FigmaMenuPageContentViewController" id="PPn-f1-RVR" customClass="FigmaMenuPageContentViewController" customModule="RoseEats" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="7ij-Xh-O7M">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="efv-aE-U2d">
+                                <rect key="frame" x="0.0" y="47" width="414" height="100"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="f0E-nw-ePM">
+                                        <rect key="frame" x="8" y="5" width="398" height="90"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pIF-VJ-2OS" customClass="RoundButton" customModule="RoseEats" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="90" height="90"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="90" id="g5x-AK-xgg"/>
+                                                    <constraint firstAttribute="width" constant="90" id="wx0-qH-AnN"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <state key="normal" title="Chauncies">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="45"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                        <real key="value" value="1"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                        <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aam-Lq-jFX" customClass="RoundButton" customModule="RoseEats" customModuleProvider="target">
+                                                <rect key="frame" x="102.5" y="0.0" width="90" height="90"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="90" id="2b0-jk-b33"/>
+                                                    <constraint firstAttribute="width" constant="90" id="EUQ-nR-WhQ"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <state key="normal" title="Chauncies">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="45"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                        <real key="value" value="1"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                        <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mAG-HI-r1z" customClass="RoundButton" customModule="RoseEats" customModuleProvider="target">
+                                                <rect key="frame" x="205.5" y="0.0" width="90" height="90"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="90" id="4XB-cQ-Cr6"/>
+                                                    <constraint firstAttribute="height" constant="90" id="AlK-Cv-ScE"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <state key="normal" title="Chauncies">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="45"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                        <real key="value" value="1"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                        <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bOw-9Y-GjK" customClass="RoundButton" customModule="RoseEats" customModuleProvider="target">
+                                                <rect key="frame" x="308" y="0.0" width="90" height="90"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="90" id="Ubu-7o-4hV"/>
+                                                    <constraint firstAttribute="height" constant="90" id="hbS-YB-GJh"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <state key="normal" title="Chauncies">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="45"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                        <real key="value" value="1"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                        <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemGrayColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="f0E-nw-ePM" secondAttribute="trailing" constant="8" id="8Ql-eP-oX4"/>
+                                    <constraint firstAttribute="height" constant="100" id="KxO-hL-CO3"/>
+                                    <constraint firstItem="f0E-nw-ePM" firstAttribute="centerY" secondItem="efv-aE-U2d" secondAttribute="centerY" id="VUN-sD-mLi"/>
+                                    <constraint firstItem="f0E-nw-ePM" firstAttribute="leading" secondItem="efv-aE-U2d" secondAttribute="leading" constant="8" id="qJ8-Y1-fur"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Chauncies Menu" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4we-dH-AWc">
+                                <rect key="frame" x="0.0" y="155" width="414" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="faK-Sn-apf">
+                                <rect key="frame" x="0.0" y="183.5" width="414" height="678.5"/>
+                                <color key="backgroundColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="FigmaMenuItemCell" id="cvI-dp-ZuZ" customClass="FigmaMenuTableCell" customModule="RoseEats" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="cvI-dp-ZuZ" id="LVb-Xv-lNE">
+                                            <rect key="frame" x="0.0" y="0.0" width="383" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="fP1-6i-z8g">
+                                                    <rect key="frame" x="0.0" y="0.0" width="83" height="43.5"/>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FPG-62-kTw">
+                                                    <rect key="frame" x="170.5" y="11.5" width="42" height="20.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="FPG-62-kTw" firstAttribute="centerY" secondItem="LVb-Xv-lNE" secondAttribute="centerY" id="h3d-qI-OpR"/>
+                                                <constraint firstAttribute="trailing" secondItem="fP1-6i-z8g" secondAttribute="trailing" constant="300" id="hpR-H8-azc"/>
+                                                <constraint firstItem="fP1-6i-z8g" firstAttribute="top" secondItem="LVb-Xv-lNE" secondAttribute="top" id="sf6-dT-T6j"/>
+                                                <constraint firstItem="fP1-6i-z8g" firstAttribute="leading" secondItem="LVb-Xv-lNE" secondAttribute="leading" id="wP3-7T-LJk"/>
+                                                <constraint firstAttribute="bottom" secondItem="fP1-6i-z8g" secondAttribute="bottom" id="yWe-7F-l4S"/>
+                                                <constraint firstItem="FPG-62-kTw" firstAttribute="centerX" secondItem="LVb-Xv-lNE" secondAttribute="centerX" id="zdq-r6-O33"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="R8r-2X-Hli" kind="show" identifier="FigmaDetailSegue" id="hEn-kZ-m2g"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="4we-dH-AWc" firstAttribute="top" secondItem="efv-aE-U2d" secondAttribute="bottom" constant="8" id="0bO-jz-VcD"/>
+                            <constraint firstItem="faK-Sn-apf" firstAttribute="leading" secondItem="VQV-5n-RFM" secondAttribute="leading" id="35s-fm-6N5"/>
+                            <constraint firstItem="efv-aE-U2d" firstAttribute="top" secondItem="VQV-5n-RFM" secondAttribute="top" constant="3" id="E6H-48-KfW"/>
+                            <constraint firstItem="4we-dH-AWc" firstAttribute="trailing" secondItem="VQV-5n-RFM" secondAttribute="trailing" id="Ff3-11-KCr"/>
+                            <constraint firstItem="efv-aE-U2d" firstAttribute="leading" secondItem="VQV-5n-RFM" secondAttribute="leading" id="FnM-9b-rF9"/>
+                            <constraint firstItem="efv-aE-U2d" firstAttribute="trailing" secondItem="VQV-5n-RFM" secondAttribute="trailing" id="MoF-uF-gmN"/>
+                            <constraint firstItem="faK-Sn-apf" firstAttribute="top" secondItem="4we-dH-AWc" secondAttribute="bottom" constant="8" id="VXT-lc-M7a"/>
+                            <constraint firstItem="4we-dH-AWc" firstAttribute="leading" secondItem="VQV-5n-RFM" secondAttribute="leading" id="eL5-r2-8gU"/>
+                            <constraint firstItem="VQV-5n-RFM" firstAttribute="bottom" secondItem="faK-Sn-apf" secondAttribute="bottom" id="f4g-2X-vpS"/>
+                            <constraint firstItem="faK-Sn-apf" firstAttribute="trailing" secondItem="VQV-5n-RFM" secondAttribute="trailing" id="hPs-ME-caK"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="VQV-5n-RFM"/>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="faK-Sn-apf" id="WPu-Ek-WFL"/>
+                        <outlet property="titleLabel" destination="4we-dH-AWc" id="2eP-Vh-IO9"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="q2l-pI-Z5O" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="797" y="-775"/>
         </scene>
         <!--Menu Page Content View Controller-->
         <scene sceneID="MW0-5o-U1O">
@@ -126,7 +306,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uoZ-X5-LGm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="206" y="-423"/>
+            <point key="canvasLocation" x="1649" y="-757"/>
         </scene>
         <!--Menu Item Detail View Controller-->
         <scene sceneID="5ec-sj-LAg">
@@ -206,7 +386,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yWp-Gh-02n" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="205.79710144927537" y="291.96428571428572"/>
+            <point key="canvasLocation" x="1426" y="-52"/>
         </scene>
         <!--Profile-->
         <scene sceneID="wg7-f3-ORb">
@@ -241,7 +421,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-281.15942028985512" y="993.75"/>
+            <point key="canvasLocation" x="1861" y="652"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="yl2-sM-qoP">
@@ -260,7 +440,7 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HuB-VB-40B" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1910.144927536232" y="1015.8482142857142"/>
+            <point key="canvasLocation" x="87" y="652"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="MjH-KF-M6i">
@@ -278,11 +458,14 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3PH-3j-8id" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="411.59420289855075" y="1037.2767857142858"/>
+            <point key="canvasLocation" x="-910" y="-97"/>
         </scene>
     </scenes>
     <resources>
         <image name="cart" catalog="system" width="64" height="50"/>
         <image name="person" catalog="system" width="64" height="58"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="hEn-kZ-m2g"/>
+    </inferredMetricsTieBreakers>
 </document>

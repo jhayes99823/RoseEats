@@ -48,10 +48,16 @@ class MenusPageViewController: UIPageViewController, UIPageViewControllerDataSou
     }
     
     
-    func getViewControllerAtIndex(index: NSInteger) -> MenuPageContentViewController
+    func getViewControllerAtIndex(index: NSInteger) -> FigmaMenuPageContentViewController
     {
         // Create a new view controller and pass suitable data.
-        let pageContentViewController = self.storyboard?.instantiateViewController(withIdentifier: "MenuPageContentViewController") as! MenuPageContentViewController
+        //let pageContentViewController = self.storyboard?.instantiateViewController(withIdentifier: "MenuPageContentViewController") as! MenuPageContentViewController
+        //pageContentViewController.strTitle = "\(arrPageTitle[index])"
+        //pageContentViewController.pageIndex = index
+       // return pageContentViewController
+        
+        
+        let pageContentViewController = self.storyboard?.instantiateViewController(withIdentifier: "FigmaMenuPageContentViewController") as! FigmaMenuPageContentViewController
         pageContentViewController.strTitle = "\(arrPageTitle[index])"
         pageContentViewController.pageIndex = index
         return pageContentViewController
