@@ -10,7 +10,7 @@ import UIKit
 
 class MenusPageViewController: UIPageViewController, UIPageViewControllerDataSource {
     func pageViewController(_ pageViewController: UIPageViewController, viewControllerBefore viewController: UIViewController) -> UIViewController? {
-        let pageContent: MenuPageContentViewController = viewController as! MenuPageContentViewController
+        let pageContent: FigmaMenuPageContentViewController = viewController as! FigmaMenuPageContentViewController
         var index = pageContent.pageIndex
         if ((index == 0) || (index == NSNotFound))
         {
@@ -21,7 +21,7 @@ class MenusPageViewController: UIPageViewController, UIPageViewControllerDataSou
     }
     
     func pageViewController(_ pageViewController: UIPageViewController, viewControllerAfter viewController: UIViewController) -> UIViewController? {
-        let pageContent: MenuPageContentViewController = viewController as! MenuPageContentViewController
+        let pageContent: FigmaMenuPageContentViewController = viewController as! FigmaMenuPageContentViewController
         var index = pageContent.pageIndex
         if (index == NSNotFound)
         {

@@ -28,6 +28,14 @@ class FigmaMenuPageContentViewController: UIViewController, UITableViewDelegate,
     
     var menuPageTableCellID = "FigmaMenuItemCell"
     
+    @IBAction func pressedRestaurantChangeButton(_ sender: Any) {
+        let but = sender as! UIButton
+                
+        strTitle = restaurants[but.tag].name
+        titleLabel.text = strTitle
+        getMenuforRestaurant()
+
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
                 
@@ -42,6 +50,17 @@ class FigmaMenuPageContentViewController: UIViewController, UITableViewDelegate,
 //        tableView.register(MenuTableCell.self, forCellReuseIdentifier: menuPageTableCellID)
 
         titleLabel.text = strTitle
+    }
+    
+    func getMenuforRestaurant(){
+        menuItemRef.whereField("WhereServed", arrayContains: self.strTitle!).getDocuments { (querySnapShot, error) in
+            self.menuItems.removeAll()
+            querySnapShot?.documents.forEach({ (docSnapShot) in
+                self.menuItems.append(MenuItem(documentSnapShot: docSnapShot))
+            }
+            )
+            self.tableView.reloadData()
+        }
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -67,6 +86,9 @@ class FigmaMenuPageContentViewController: UIViewController, UITableViewDelegate,
             )
             self.tableView.reloadData()
         }
+        //getMenuforRestaurant()
+        
+        
     }
     
     override func viewWillDisappear(_ animated: Bool) {
