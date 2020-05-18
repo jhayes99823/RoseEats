@@ -44,7 +44,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-909" y="775"/>
+            <point key="canvasLocation" x="-659" y="915"/>
         </scene>
         <!--Menus-->
         <scene sceneID="bFe-ur-9pF">
@@ -54,18 +54,18 @@
                 </pageViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IIE-y6-pAe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1023" y="625"/>
+            <point key="canvasLocation" x="999" y="970"/>
         </scene>
         <!--Figma Menu Page Content View Controller-->
         <scene sceneID="w0w-Kb-u3h">
             <objects>
                 <viewController storyboardIdentifier="FigmaMenuPageContentViewController" id="PPn-f1-RVR" customClass="FigmaMenuPageContentViewController" customModule="RoseEats" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="7ij-Xh-O7M">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="efv-aE-U2d">
-                                <rect key="frame" x="0.0" y="47" width="414" height="100"/>
+                                <rect key="frame" x="0.0" y="3" width="414" height="100"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="f0E-nw-ePM">
                                         <rect key="frame" x="8" y="5" width="398" height="90"/>
@@ -182,13 +182,13 @@
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Chauncies Menu" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4we-dH-AWc">
-                                <rect key="frame" x="0.0" y="155" width="414" height="21"/>
+                                <rect key="frame" x="0.0" y="111" width="414" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="faK-Sn-apf">
-                                <rect key="frame" x="0.0" y="183.5" width="414" height="678.5"/>
+                                <rect key="frame" x="0.0" y="139.5" width="414" height="668.5"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="FigmaMenuItemCell" rowHeight="40" id="cvI-dp-ZuZ" customClass="FigmaMenuTableCell" customModule="RoseEats" customModuleProvider="target">
@@ -242,14 +242,16 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="VQV-5n-RFM"/>
                     </view>
+                    <navigationItem key="navigationItem" id="pfT-cx-95o"/>
                     <connections>
                         <outlet property="tableView" destination="faK-Sn-apf" id="WPu-Ek-WFL"/>
                         <outlet property="titleLabel" destination="4we-dH-AWc" id="2eP-Vh-IO9"/>
+                        <segue destination="zLc-5Z-JVs" kind="show" identifier="CheckCartSegue" id="bUd-iL-Rng"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="q2l-pI-Z5O" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2455" y="-352"/>
+            <point key="canvasLocation" x="316" y="-480"/>
         </scene>
         <!--Menu Page Content View Controller-->
         <scene sceneID="MW0-5o-U1O">
@@ -321,7 +323,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uoZ-X5-LGm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1649" y="-757"/>
+            <point key="canvasLocation" x="2601" y="-188"/>
         </scene>
         <!--Menu Item Detail View Controller-->
         <scene sceneID="5ec-sj-LAg">
@@ -345,6 +347,7 @@
                                 </state>
                                 <connections>
                                     <action selector="pressedAddToCart:" destination="R8r-2X-Hli" eventType="touchUpInside" id="QQD-PS-4Rx"/>
+                                    <segue destination="PPn-f1-RVR" kind="show" identifier="FigmamenuDetailpageSegue" id="FA5-Zd-ff9"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Detail View Page" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3le-lB-Er7">
@@ -401,7 +404,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yWp-Gh-02n" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1426" y="-52"/>
+            <point key="canvasLocation" x="1568" y="-3"/>
         </scene>
         <!--Profile-->
         <scene sceneID="wg7-f3-ORb">
@@ -436,7 +439,45 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1861" y="652"/>
+            <point key="canvasLocation" x="1941" y="1124"/>
+        </scene>
+        <!--Order Table View Controller-->
+        <scene sceneID="qOf-1U-aGu">
+            <objects>
+                <tableViewController id="zLc-5Z-JVs" customClass="OrderTableViewController" customModule="RoseEats" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="6aq-Sb-qMO">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="OrderCell" textLabel="olo-aJ-H7A" style="IBUITableViewCellStyleDefault" id="xoO-43-Zzb">
+                                <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="xoO-43-Zzb" id="8Am-Zr-2wp">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="olo-aJ-H7A">
+                                            <rect key="frame" x="20" y="0.0" width="374" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="zLc-5Z-JVs" id="QJe-Lk-PJb"/>
+                            <outlet property="delegate" destination="zLc-5Z-JVs" id="7Us-I2-BMo"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="xyH-Iv-LZd"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qzq-wl-7nc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2771" y="531"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="yl2-sM-qoP">
@@ -455,7 +496,7 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HuB-VB-40B" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="87" y="652"/>
+            <point key="canvasLocation" x="316" y="664"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="MjH-KF-M6i">
@@ -473,7 +514,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3PH-3j-8id" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-910" y="-97"/>
+            <point key="canvasLocation" x="-594" y="41"/>
         </scene>
     </scenes>
     <resources>

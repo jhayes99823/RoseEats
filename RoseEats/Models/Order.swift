@@ -20,7 +20,7 @@ class OrderItem {
 }
 
 class Order {
-    var Items: [ OrderItem]
+    var Items: [OrderItem]
     var User: String
     var Restaurant: String
     var id: String

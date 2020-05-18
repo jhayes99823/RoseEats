@@ -7,7 +7,7 @@
 //
 
 import UIKit
-
+import FirebaseAuth
 class MenuItemDetailViewController: UIViewController {
     
     @IBOutlet weak var pageTitle: UILabel!
@@ -22,8 +22,12 @@ class MenuItemDetailViewController: UIViewController {
     
     @IBOutlet weak var addToCartButton: UIButton!
     var menuItem: MenuItem?
-    
+    var orders: Order?
+    var currentRest: String?
+    var menuDetailpageSegue = "FigmamenuDetailpageSegue"
     @IBAction func pressedAddToCart(_ sender: Any) {
+        print("In the pressed function")
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -41,4 +45,21 @@ class MenuItemDetailViewController: UIViewController {
         pageTitle.text = menuItem?.Name
         imageView.image = UIImage(named: menuItem!.ImageName)
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == menuDetailpageSegue {
+            if(orders == nil){
+                var orderItems = [OrderItem]()
+                orderItems.append(OrderItem(MenuItem: menuItem!.Name, Quantity: Int(quantityLabel.text!)!))
+                orders = Order(Restaurant: currentRest!, User: Auth.auth().currentUser!.uid, Items: orderItems)
+            }else{
+                var orderItems = [OrderItem]()
+                orders!.Items.append(OrderItem(MenuItem: menuItem!.Name, Quantity: Int(quantityLabel.text!)!))
+            }
+            
+            (segue.destination as! FigmaMenuPageContentViewController).order = orders!
+            (segue.destination as! FigmaMenuPageContentViewController).strTitle = currentRest!
+        }
+    }
+    
 }
