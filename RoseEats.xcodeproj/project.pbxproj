@@ -11,7 +11,6 @@
 		0A2908A5246BA55500E685C5 /* hot_chocolate.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 0A2908A2246BA55500E685C5 /* hot_chocolate.jpg */; };
 		0A2908A7246BA76000E685C5 /* chai_latte.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 0A2908A6246BA76000E685C5 /* chai_latte.jpg */; };
 		0A2908A9246BB5BB00E685C5 /* Order.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A2908A8246BB5BB00E685C5 /* Order.swift */; };
-		0A2908AD2471DA8C00E685C5 /* RestaurantNavBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A2908AC2471DA8C00E685C5 /* RestaurantNavBarView.swift */; };
 		0A2908B22471E33300E685C5 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A2908B12471E33300E685C5 /* Constants.swift */; };
 		0A2C0886247114B2001A3C72 /* RoundButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A2C0885247114B2001A3C72 /* RoundButton.swift */; };
 		0A2C08882471186E001A3C72 /* FigmaMenuPageContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A2C08872471186E001A3C72 /* FigmaMenuPageContentViewController.swift */; };
@@ -38,7 +37,6 @@
 		0A2908A2246BA55500E685C5 /* hot_chocolate.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = hot_chocolate.jpg; sourceTree = "<group>"; };
 		0A2908A6246BA76000E685C5 /* chai_latte.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = chai_latte.jpg; path = ../../../../Downloads/chai_latte.jpg; sourceTree = "<group>"; };
 		0A2908A8246BB5BB00E685C5 /* Order.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Order.swift; sourceTree = "<group>"; };
-		0A2908AC2471DA8C00E685C5 /* RestaurantNavBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantNavBarView.swift; sourceTree = "<group>"; };
 		0A2908B12471E33300E685C5 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		0A2C0885247114B2001A3C72 /* RoundButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundButton.swift; sourceTree = "<group>"; };
 		0A2C08872471186E001A3C72 /* FigmaMenuPageContentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FigmaMenuPageContentViewController.swift; sourceTree = "<group>"; };
@@ -130,7 +128,6 @@
 				0A85A54D246B185E00770EA7 /* MenuItemDetailViewController.swift */,
 				0A85A54F246B1BF500770EA7 /* LoginPageViewController.swift */,
 				0A2C08872471186E001A3C72 /* FigmaMenuPageContentViewController.swift */,
-				0A2908AC2471DA8C00E685C5 /* RestaurantNavBarView.swift */,
 			);
 			path = RoseEats;
 			sourceTree = "<group>";
@@ -325,7 +322,6 @@
 				0A85A550246B1BF500770EA7 /* LoginPageViewController.swift in Sources */,
 				0A30B3522469F562006E3B3B /* SceneDelegate.swift in Sources */,
 				0A2908B22471E33300E685C5 /* Constants.swift in Sources */,
-				0A2908AD2471DA8C00E685C5 /* RestaurantNavBarView.swift in Sources */,
 				0A2C08882471186E001A3C72 /* FigmaMenuPageContentViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
