@@ -90,6 +90,8 @@ class MenuPageContentViewController: UIViewController, UITableViewDelegate, UITa
         
         cell.menuItemLabel?.text = self.menuItems[indexPath.row].Name
         cell.menuItemImageView?.image = UIImage(named: self.menuItems[indexPath.row].ImageName)
+        cell.layer.cornerRadius = cell.frame.height / 2
+        cell.layer.masksToBounds = true
                 
         return cell
     }
