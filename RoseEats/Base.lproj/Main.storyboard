@@ -259,13 +259,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Restaurant Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aUQ-Tj-foG">
-                                <rect key="frame" x="20" y="64" width="374" height="29"/>
+                                <rect key="frame" x="20" y="94" width="374" height="29"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Vrq-GC-qeN">
-                                <rect key="frame" x="20" y="121" width="374" height="664"/>
+                                <rect key="frame" x="20" y="154" width="374" height="564"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="MenuItemCell" id="Lvr-Rh-N8M" customClass="MenuTableCell" customModule="RoseEats" customModuleProvider="target">
@@ -302,13 +302,13 @@
                         </subviews>
                         <color key="backgroundColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="aUQ-Tj-foG" firstAttribute="top" secondItem="13q-3h-YhA" secondAttribute="top" constant="20" id="3Zd-pb-HF1"/>
+                            <constraint firstItem="aUQ-Tj-foG" firstAttribute="top" secondItem="13q-3h-YhA" secondAttribute="top" constant="50" id="3Zd-pb-HF1"/>
                             <constraint firstItem="aUQ-Tj-foG" firstAttribute="leading" secondItem="13q-3h-YhA" secondAttribute="leading" constant="20" id="7or-Zz-W0o"/>
                             <constraint firstItem="13q-3h-YhA" firstAttribute="trailing" secondItem="Vrq-GC-qeN" secondAttribute="trailing" constant="20" id="KUo-hf-78H"/>
                             <constraint firstItem="Vrq-GC-qeN" firstAttribute="centerX" secondItem="13q-3h-YhA" secondAttribute="centerX" id="N4M-xK-hIg"/>
                             <constraint firstItem="13q-3h-YhA" firstAttribute="trailing" secondItem="aUQ-Tj-foG" secondAttribute="trailing" constant="20" id="Prd-3p-Wna"/>
-                            <constraint firstItem="Vrq-GC-qeN" firstAttribute="centerY" secondItem="13q-3h-YhA" secondAttribute="centerY" id="omb-YH-abo"/>
-                            <constraint firstItem="Vrq-GC-qeN" firstAttribute="top" secondItem="aUQ-Tj-foG" secondAttribute="bottom" constant="28" id="xIj-VR-SH2"/>
+                            <constraint firstItem="Vrq-GC-qeN" firstAttribute="centerY" secondItem="13q-3h-YhA" secondAttribute="centerY" constant="-17" id="omb-YH-abo"/>
+                            <constraint firstItem="Vrq-GC-qeN" firstAttribute="top" secondItem="aUQ-Tj-foG" secondAttribute="bottom" constant="31" id="xIj-VR-SH2"/>
                             <constraint firstItem="Vrq-GC-qeN" firstAttribute="leading" secondItem="13q-3h-YhA" secondAttribute="leading" constant="20" id="zaV-cn-sBL"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="13q-3h-YhA"/>
@@ -320,7 +320,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uoZ-X5-LGm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1649" y="-757"/>
+            <point key="canvasLocation" x="1647.826086956522" y="-757.36607142857144"/>
         </scene>
         <!--Menu Item Detail View Controller-->
         <scene sceneID="5ec-sj-LAg">

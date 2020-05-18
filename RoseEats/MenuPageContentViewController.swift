@@ -10,7 +10,6 @@ import UIKit
 import Firebase
 
 class MenuTableCell: UITableViewCell {
-    
     @IBOutlet weak var menuItemImageView: UIImageView!
     @IBOutlet weak var menuItemLabel: UILabel!
 }
