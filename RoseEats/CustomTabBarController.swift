@@ -16,7 +16,11 @@ class CustomTabBarController: UITabBarController{
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.navigationController?.navigationItem.backBarButtonItem = UIBarButtonItem(title: "☰", style: .plain, target: self, action:nil)
+        
         navigationItem.rightBarButtonItem = UIBarButtonItem(title: "☰", style: .plain, target: self, action: #selector(showMenu))
+        //navigationItem.backBarButtonItem = nil
     }
     
     @objc func showMenu(){
@@ -59,6 +63,8 @@ class CustomTabBarController: UITabBarController{
             (segue.destination as! MenusPageViewController).order = order
         }else if segue.identifier == checkCartSegue{
             (segue.destination as! OrderTableViewController).orders = order!.Items
+            (segue.destination as! OrderTableViewController).rest = order!.Restaurant
+            (segue.destination as! OrderTableViewController).User = order!.User
         }
     }
 }

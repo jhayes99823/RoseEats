@@ -14,16 +14,23 @@ class OrderTableViewController:UITableViewController{
     
     
     let OrderCellidentifier = "OrderCell"
-    let detailSegueIdentifier = "DetailSegue"
+    let mainPageSegue = "MainPageSegue"
     var orders: [OrderItem]?
-    var User: String?
+    var rest:String?
+    var User:String?
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        navigationItem.leftBarButtonItem = editButtonItem
+        navigationItem.rightBarButtonItem = editButtonItem
+        navigationItem.backBarButtonItem = nil
+        //navigationItem.leftBarButtonItem
     }
     
+    @objc func backButtonPressed(){
+        print("BACK PRESSED")
+        self.performSegue(withIdentifier: mainPageSegue, sender: self)
+    }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return orders!.count
@@ -44,6 +51,16 @@ class OrderTableViewController:UITableViewController{
             print(indexPath.row)
             orders!.remove(at: indexPath.row)
             tableView.reloadData()
+        }
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        print("SEGUE BACK!!!")
+        if segue.identifier == mainPageSegue {
+            for orderit in orders!{
+                print(orderit.MenuItem)
+            }
+            (segue.destination as! MenusPageViewController).order = Order(Restaurant: rest!, User: User!, Items: orders!)
         }
     }
 }

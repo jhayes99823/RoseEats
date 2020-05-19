@@ -12,7 +12,7 @@
             <objects>
                 <viewController id="9pv-A4-QxB" customClass="LoginPageViewController" customModule="RoseEats" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="tsR-hK-woN">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Login Page" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mVm-WF-Rg5">
@@ -411,11 +411,11 @@
             <objects>
                 <viewController id="8rJ-Kc-sve" customClass="ProfileViewController" customModule="RoseEats" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="QS5-Rx-YEW">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fed-Cu-vAe">
-                                <rect key="frame" x="131" y="667" width="152" height="30"/>
+                                <rect key="frame" x="131" y="755" width="152" height="30"/>
                                 <state key="normal" title="Sign Out">
                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                 </state>
@@ -446,7 +446,7 @@
             <objects>
                 <tableViewController id="E1x-Wz-uhu" customClass="OrderTableViewController" customModule="RoseEats" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="2Od-tQ-HBs">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <prototypes>
@@ -474,6 +474,9 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" id="AWH-Ij-rfS"/>
+                    <connections>
+                        <segue destination="49e-Tb-3d3" kind="show" identifier="MainPageSegue" id="0Ne-Sc-VhQ"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aE2-DQ-65I" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -484,8 +487,10 @@
             <objects>
                 <tabBarController id="49e-Tb-3d3" customClass="CustomTabBarController" customModule="RoseEats" customModuleProvider="target" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="jhg-UQ-eKp"/>
-                    <tabBar key="tabBar" contentMode="scaleToFill" id="W28-zg-YXA">
-                        <rect key="frame" x="0.0" y="975" width="768" height="49"/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" barStyle="black" prompted="NO"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics" barStyle="black"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" barStyle="black" id="W28-zg-YXA">
+                        <rect key="frame" x="0.0" y="975" width="768" height="83"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                     </tabBar>
@@ -499,12 +504,13 @@
             </objects>
             <point key="canvasLocation" x="87" y="652"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Cutom Nav Controller-->
         <scene sceneID="MjH-KF-M6i">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="8KD-Gu-tFe" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="8KD-Gu-tFe" customClass="CutomNavController" customModule="RoseEats" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="uw9-zR-rTe">
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" barStyle="black" translucent="NO"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" barStyle="black" translucent="NO" id="uw9-zR-rTe">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -523,7 +529,8 @@
         <image name="person" catalog="system" width="64" height="58"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Fb6-V8-ngd"/>
+        <segue reference="ep1-oZ-6J0"/>
+        <segue reference="0Ne-Sc-VhQ"/>
         <segue reference="e1a-Go-cb3"/>
     </inferredMetricsTieBreakers>
 </document>
