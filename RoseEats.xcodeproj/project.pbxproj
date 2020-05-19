@@ -25,6 +25,7 @@
 		0A30B35B2469F562006E3B3B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0A30B35A2469F562006E3B3B /* Assets.xcassets */; };
 		0A30B35E2469F562006E3B3B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0A30B35C2469F562006E3B3B /* LaunchScreen.storyboard */; };
 		0A30B3662469F5A2006E3B3B /* MenuPageContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A30B3652469F5A2006E3B3B /* MenuPageContentViewController.swift */; };
+		0A4E9D602473C6B600B329C2 /* OrderTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A4E9D5F2473C6B600B329C2 /* OrderTableViewController.swift */; };
 		0A85A54A246B170100770EA7 /* burger-plain.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 0A85A549246B170100770EA7 /* burger-plain.jpg */; };
 		0A85A54E246B185E00770EA7 /* MenuItemDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A85A54D246B185E00770EA7 /* MenuItemDetailViewController.swift */; };
 		0A85A550246B1BF500770EA7 /* LoginPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A85A54F246B1BF500770EA7 /* LoginPageViewController.swift */; };
@@ -53,6 +54,7 @@
 		0A30B35D2469F562006E3B3B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0A30B35F2469F562006E3B3B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0A30B3652469F5A2006E3B3B /* MenuPageContentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuPageContentViewController.swift; sourceTree = "<group>"; };
+		0A4E9D5F2473C6B600B329C2 /* OrderTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderTableViewController.swift; sourceTree = "<group>"; };
 		0A85A549246B170100770EA7 /* burger-plain.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "burger-plain.jpg"; sourceTree = "<group>"; };
 		0A85A54D246B185E00770EA7 /* MenuItemDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuItemDetailViewController.swift; sourceTree = "<group>"; };
 		0A85A54F246B1BF500770EA7 /* LoginPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPageViewController.swift; sourceTree = "<group>"; };
@@ -128,6 +130,7 @@
 				0A85A54D246B185E00770EA7 /* MenuItemDetailViewController.swift */,
 				0A85A54F246B1BF500770EA7 /* LoginPageViewController.swift */,
 				0A2C08872471186E001A3C72 /* FigmaMenuPageContentViewController.swift */,
+				0A4E9D5F2473C6B600B329C2 /* OrderTableViewController.swift */,
 			);
 			path = RoseEats;
 			sourceTree = "<group>";
@@ -318,6 +321,7 @@
 				0A30B3662469F5A2006E3B3B /* MenuPageContentViewController.swift in Sources */,
 				0A85A552246B201E00770EA7 /* Restaurant.swift in Sources */,
 				0A30B3502469F561006E3B3B /* AppDelegate.swift in Sources */,
+				0A4E9D602473C6B600B329C2 /* OrderTableViewController.swift in Sources */,
 				0A2EAF0A246B769400A2FE15 /* MenuItem.swift in Sources */,
 				0A85A550246B1BF500770EA7 /* LoginPageViewController.swift in Sources */,
 				0A30B3522469F562006E3B3B /* SceneDelegate.swift in Sources */,

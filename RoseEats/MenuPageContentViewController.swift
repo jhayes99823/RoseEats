@@ -16,6 +16,8 @@ class MenuTableCell: UITableViewCell {
 
 class MenuPageContentViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     var menuDetailpageSegue = "ShowMenuItemDetailView"
+    var checkCartSegue = "CheckCartSegue"
+
     
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var tableView: UITableView!
@@ -23,6 +25,7 @@ class MenuPageContentViewController: UIViewController, UITableViewDelegate, UITa
     let animals: [String] = ["Horse", "Cow", "Camel", "Sheep", "Goat"]
     var restaurants = [Restaurant]()
     var menuItems = [MenuItem]()
+    var order: Order?
     
     var restaurantRef: CollectionReference!
     var restaurantListener: ListenerRegistration!
@@ -42,6 +45,7 @@ class MenuPageContentViewController: UIViewController, UITableViewDelegate, UITa
         menuItemRef = Firestore.firestore().collection("MenuItem")
         
         navigationItem.backBarButtonItem = nil
+        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "☰", style: .plain, target: self, action: #selector(showMenu))
         
         tableView.delegate = self
         tableView.dataSource = self
@@ -49,6 +53,41 @@ class MenuPageContentViewController: UIViewController, UITableViewDelegate, UITa
 //        tableView.register(MenuTableCell.self, forCellReuseIdentifier: menuPageTableCellID)
 
         titleLabel.text = strTitle
+    }
+    
+    @objc func showMenu(){
+        let alertController = UIAlertController(title: "Menu Options", message: "", preferredStyle: .actionSheet)
+                
+        alertController.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
+        
+        alertController.addAction(UIAlertAction(title: "Sign Out", style: .default) { (action) in
+            do{
+                try Auth.auth().signOut()
+            }catch{
+                print("SignOut Error")
+            }
+        })
+        
+        alertController.addAction(UIAlertAction(title: "My Account", style: .default) { (action) in
+            //self.isShowAllMode = !self.isShowAllMode
+            print("Show My Account")
+            //self.startListening()
+        })
+             
+        
+        alertController.addAction(UIAlertAction(title: "Check Cart", style: .default) { (action) in
+            //self.isShowAllMode = !self.isShowAllMode
+            print("Check Cart")
+            if(self.order == nil){
+                print("EMPTY ORDER")
+            }else{
+                self.performSegue(withIdentifier: self.checkCartSegue, sender: self)
+            }
+            
+            //self.startListening()
+        })
+        
+        present(alertController, animated: true, completion: nil)
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -100,7 +139,11 @@ class MenuPageContentViewController: UIViewController, UITableViewDelegate, UITa
         if segue.identifier == menuDetailpageSegue {
             if let indexPath = tableView.indexPathForSelectedRow {
                 (segue.destination as! MenuItemDetailViewController).menuItem = menuItems[indexPath.row]
+                (segue.destination as! MenuItemDetailViewController).orders = order
+                (segue.destination as! MenuItemDetailViewController).currentRest = strTitle
             }
+        }else if segue.identifier == checkCartSegue{
+            (segue.destination as! OrderTableViewController).orders = order!.Items
         }
     }
 }
