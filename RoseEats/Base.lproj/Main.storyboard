@@ -255,17 +255,17 @@
             <objects>
                 <viewController storyboardIdentifier="MenuPageContentViewController" id="Gwb-TN-uqN" customClass="MenuPageContentViewController" customModule="RoseEats" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="z01-6o-d1K">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Restaurant Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aUQ-Tj-foG">
-                                <rect key="frame" x="20" y="94" width="374" height="29"/>
+                                <rect key="frame" x="20" y="50" width="374" height="29"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="50" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Vrq-GC-qeN">
-                                <rect key="frame" x="20" y="154" width="374" height="564"/>
+                                <rect key="frame" x="20" y="110" width="374" height="554"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="MenuItemCell" rowHeight="30" id="Lvr-Rh-N8M" customClass="MenuTableCell" customModule="RoseEats" customModuleProvider="target">
@@ -314,9 +314,11 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="13q-3h-YhA"/>
                     </view>
+                    <navigationItem key="navigationItem" id="abm-1O-L0c"/>
                     <connections>
                         <outlet property="tableView" destination="Vrq-GC-qeN" id="Oyz-Pj-cUw"/>
                         <outlet property="titleLabel" destination="aUQ-Tj-foG" id="guT-4h-8sc"/>
+                        <segue destination="E1x-Wz-uhu" kind="show" identifier="CheckCartSegue" id="ssG-fw-6pY"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uoZ-X5-LGm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -345,6 +347,7 @@
                                 </state>
                                 <connections>
                                     <action selector="pressedAddToCart:" destination="R8r-2X-Hli" eventType="touchUpInside" id="QQD-PS-4Rx"/>
+                                    <segue destination="Gwb-TN-uqN" kind="show" identifier="MenuDetailpageSegue" id="Xd2-10-s6T"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Detail View Page" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3le-lB-Er7">
@@ -401,7 +404,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yWp-Gh-02n" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1426" y="-52"/>
+            <point key="canvasLocation" x="770" y="-40"/>
         </scene>
         <!--Profile-->
         <scene sceneID="wg7-f3-ORb">
@@ -443,16 +446,25 @@
             <objects>
                 <tableViewController id="E1x-Wz-uhu" customClass="OrderTableViewController" customModule="RoseEats" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="2Od-tQ-HBs">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="h3X-Z1-GF1" customClass="OrderCell">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" textLabel="7so-mZ-dcz" style="IBUITableViewCellStyleDefault" id="h3X-Z1-GF1" customClass="OrderCell">
                                 <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="h3X-Z1-GF1" id="3R5-as-4Ta">
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="7so-mZ-dcz">
+                                            <rect key="frame" x="20" y="0.0" width="374" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
                                 </tableViewCellContentView>
                             </tableViewCell>
                         </prototypes>
@@ -461,6 +473,7 @@
                             <outlet property="delegate" destination="E1x-Wz-uhu" id="yBu-xc-oMd"/>
                         </connections>
                     </tableView>
+                    <navigationItem key="navigationItem" id="AWH-Ij-rfS"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aE2-DQ-65I" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -509,6 +522,7 @@
         <image name="person" catalog="system" width="64" height="58"/>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="Xd2-10-s6T"/>
         <segue reference="e1a-Go-cb3"/>
     </inferredMetricsTieBreakers>
 </document>

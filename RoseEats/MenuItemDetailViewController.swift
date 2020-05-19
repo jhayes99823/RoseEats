@@ -24,7 +24,7 @@ class MenuItemDetailViewController: UIViewController {
     var menuItem: MenuItem?
     var orders: Order?
     var currentRest: String?
-    var menuDetailpageSegue = "FigmamenuDetailpageSegue"
+    var menuDetailpageSegue = "MenuDetailpageSegue"
     @IBAction func pressedAddToCart(_ sender: Any) {
         print("In the pressed function")
         
