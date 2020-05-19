@@ -11,6 +11,9 @@ import UIKit
 class MenusPageViewController: UIPageViewController, UIPageViewControllerDataSource, UIPageViewControllerDelegate {
     
     let pageContentViewControllerIdentifier = "MenuPageContentViewController"
+    
+    var order: Order?
+
     let pageControl: UIPageControl = {
         let pageControl = UIPageControl()
         pageControl.pageIndicatorTintColor = UIColor.gray
@@ -33,6 +36,7 @@ class MenusPageViewController: UIPageViewController, UIPageViewControllerDataSou
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationItem.backBarButtonItem = nil
+        
        setUpUI()
         setupPageControl()
     }
@@ -70,6 +74,7 @@ class MenusPageViewController: UIPageViewController, UIPageViewControllerDataSou
             let pageContentViewController = storyboard.instantiateViewController(withIdentifier: pageContentViewControllerIdentifier) as! MenuPageContentViewController
             pageContentViewController.strTitle = "\(arrPageTitle[index])"
             pageContentViewController.pageIndex = index
+            pageContentViewController.order = self.order
             return pageContentViewController
         }
     

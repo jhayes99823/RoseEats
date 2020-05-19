@@ -26,6 +26,7 @@
 		0A30B35E2469F562006E3B3B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0A30B35C2469F562006E3B3B /* LaunchScreen.storyboard */; };
 		0A30B3662469F5A2006E3B3B /* MenuPageContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A30B3652469F5A2006E3B3B /* MenuPageContentViewController.swift */; };
 		0A4E9D602473C6B600B329C2 /* OrderTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A4E9D5F2473C6B600B329C2 /* OrderTableViewController.swift */; };
+		0A4E9D622473CDD100B329C2 /* CustomTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A4E9D612473CDD100B329C2 /* CustomTabBarController.swift */; };
 		0A85A54A246B170100770EA7 /* burger-plain.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 0A85A549246B170100770EA7 /* burger-plain.jpg */; };
 		0A85A54E246B185E00770EA7 /* MenuItemDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A85A54D246B185E00770EA7 /* MenuItemDetailViewController.swift */; };
 		0A85A550246B1BF500770EA7 /* LoginPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A85A54F246B1BF500770EA7 /* LoginPageViewController.swift */; };
@@ -55,6 +56,7 @@
 		0A30B35F2469F562006E3B3B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0A30B3652469F5A2006E3B3B /* MenuPageContentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuPageContentViewController.swift; sourceTree = "<group>"; };
 		0A4E9D5F2473C6B600B329C2 /* OrderTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderTableViewController.swift; sourceTree = "<group>"; };
+		0A4E9D612473CDD100B329C2 /* CustomTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBarController.swift; sourceTree = "<group>"; };
 		0A85A549246B170100770EA7 /* burger-plain.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "burger-plain.jpg"; sourceTree = "<group>"; };
 		0A85A54D246B185E00770EA7 /* MenuItemDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuItemDetailViewController.swift; sourceTree = "<group>"; };
 		0A85A54F246B1BF500770EA7 /* LoginPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPageViewController.swift; sourceTree = "<group>"; };
@@ -131,6 +133,7 @@
 				0A85A54F246B1BF500770EA7 /* LoginPageViewController.swift */,
 				0A2C08872471186E001A3C72 /* FigmaMenuPageContentViewController.swift */,
 				0A4E9D5F2473C6B600B329C2 /* OrderTableViewController.swift */,
+				0A4E9D612473CDD100B329C2 /* CustomTabBarController.swift */,
 			);
 			path = RoseEats;
 			sourceTree = "<group>";
@@ -315,6 +318,7 @@
 			files = (
 				0A30B3562469F562006E3B3B /* ProfileViewController.swift in Sources */,
 				0A85A54E246B185E00770EA7 /* MenuItemDetailViewController.swift in Sources */,
+				0A4E9D622473CDD100B329C2 /* CustomTabBarController.swift in Sources */,
 				0A2908A9246BB5BB00E685C5 /* Order.swift in Sources */,
 				0A30B3542469F562006E3B3B /* MenusPageViewController.swift in Sources */,
 				0A2C0886247114B2001A3C72 /* RoundButton.swift in Sources */,

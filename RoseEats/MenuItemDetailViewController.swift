@@ -56,8 +56,8 @@ class MenuItemDetailViewController: UIViewController {
                 orders!.Items.append(OrderItem(MenuItem: menuItem!.Name, Quantity: Int(quantityLabel.text!)!))
             }
             
-            (segue.destination as! MenuPageContentViewController).order = orders!
-            (segue.destination as! MenuPageContentViewController).strTitle = currentRest!
+            (segue.destination as! CustomTabBarController).order = orders!
+            //(segue.destination as! MenuPageContentViewController).strTitle = currentRest!
         }
     }
     
