@@ -25,8 +25,6 @@ class MenusPageViewController: UIPageViewController, UIPageViewControllerDataSou
                     super.init(transitionStyle: .scroll, navigationOrientation: .horizontal, options: nil)
         }
     
-    
-    
         required init?(coder: NSCoder) {
                super.init(coder: coder)
     
@@ -89,66 +87,6 @@ class MenusPageViewController: UIPageViewController, UIPageViewControllerDataSou
         func presentationIndex(for pageViewController: UIPageViewController) -> Int {
             return 0
         }
-    
-//    func pageViewController(_ pageViewController: UIPageViewController, viewControllerBefore viewController: UIViewController) -> UIViewController? {
-//        let pageContent: MenuPageContentViewController = viewController as! MenuPageContentViewController
-//        var index = pageContent.pageIndex
-//        if ((index == 0) || (index == NSNotFound))
-//        {
-//            return nil
-//        }
-//        index! -= 1;
-//        return getViewControllerAtIndex(index: index!)
-//    }
-//
-//
-//
-//    func pageViewController(_ pageViewController: UIPageViewController, viewControllerAfter viewController: UIViewController) -> UIViewController? {
-//        let pageContent: MenuPageContentViewController = viewController as! MenuPageContentViewController
-//        var index = pageContent.pageIndex
-//        if (index == NSNotFound)
-//        {
-//            return nil;
-//        }
-//        index! += 1;
-//        if (index == arrPageTitle.count)
-//        {
-//            return nil;
-//        }
-//        return getViewControllerAtIndex(index: index!)
-//    }
-//
-//    func getViewControllerAtIndex(index: NSInteger) -> MenuPageContentViewController
-//    {
-//        // Create a new view controller and pass suitable data.
-//        let pageContentViewController = self.storyboard?.instantiateViewController(withIdentifier: "MenuPageContentViewController") as! MenuPageContentViewController
-//        pageContentViewController.strTitle = "\(arrPageTitle[index])"
-//        pageContentViewController.pageIndex = index
-//        return pageContentViewController
-//
-//
-//       let pageContentViewController = self.storyboard?.instantiateViewController(withIdentifier: "FigmaMenuPageContentViewController") as! FigmaMenuPageContentViewController
-//       pageContentViewController.strTitle = "\(arrPageTitle[index])"
-//       pageContentViewController.pageIndex = index
-//        return pageContentViewController
-//    }
-//
-//    private func setupPageControl() {
-//        let appearance = UIPageControl.appearance()
-//        appearance.pageIndicatorTintColor = UIColor.gray
-//        appearance.currentPageIndicatorTintColor = UIColor.white
-//        appearance.backgroundColor = UIColor.clear
-//    }
-//
-//    func presentationCountForPageViewController(pageViewController: UIPageViewController) -> Int
-//      {
-//        return arrPageTitle.count
-//      }
-//
-//      func presentationIndexForPageViewController(pageViewController: UIPageViewController) -> Int
-//      {
-//        return 0
-//      }
     
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
