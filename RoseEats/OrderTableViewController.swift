@@ -19,7 +19,7 @@ class OrderTableCell: UITableViewCell {
     var table:OrderTableViewController?
     
     @IBAction func OnEditButtonPressed(_ sender: Any) {
-        table!.Getpopup()
+        table!.Getpopup(text: NameCell.text!, amt: AmountCell.text!)
     }
     
 }
@@ -37,16 +37,51 @@ class OrderTableViewController:UITableViewController{
     @IBOutlet var BlurView: UIVisualEffectView!
     @IBOutlet var popUpView: UIView!
 
+    @IBOutlet weak var popupItemName: UILabel!
+    @IBOutlet weak var QuantityStepper: UIStepper!
+    @IBOutlet weak var quantityLabel: UILabel!
+    @IBAction func StepperValueChanged(_ sender: Any) {
+        quantityLabel.text = Int((sender as! UIStepper).value).description
+        print((sender as! UIStepper).value)
+    }
     
-    public func Getpopup(){
+    @IBAction func pressedDone(_ sender: Any) {
+        RemovePopup()
+    }
+    public func Getpopup(text:String, amt: String){
+        quantityLabel.text = amt
+        popupItemName.text = text
+        QuantityStepper.value = Double(amt)!
         animateIn(neededView: BlurView)
         animateIn(neededView: popUpView)
     }
     
+    public func RemovePopup(){
+        editamt(of: popupItemName.text!, to: quantityLabel.text!)
+        animateOut(neededView: BlurView)
+        animateOut(neededView: popUpView)
+        self.tableView.reloadData()
+    }
+    
+    func editamt(of name:String, to amt:String){
+        for item in orders!{
+            if(item.MenuItem == name){
+                item.Quantity = Int(amt)!
+            }
+        }
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        QuantityStepper.autorepeat = true
+        QuantityStepper.minimumValue = 1
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        BlurView.bounds = self.view.bounds
-        popUpView.bounds = CGRect(x: 0, y: 0, width: self.view.bounds.width * 0.8, height: self.view.bounds.height * 0.5)
+        BlurView.bounds = CGRect(x: 0, y: 0, width: self.view.bounds.width*1.2, height: self.view.bounds.height*1.2)
+        popUpView.bounds = CGRect(x: 0, y: 0, width: self.view.bounds.width * 0.7, height: self.view.bounds.height * 0.3)
+        popUpView.layer.cornerRadius = 20
         navigationItem.rightBarButtonItem = editButtonItem
         navigationItem.hidesBackButton = true
         navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Back", style: .plain, target: self, action: #selector((backButtonPressed)))
