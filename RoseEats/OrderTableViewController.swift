@@ -9,8 +9,23 @@
 import UIKit
 import FirebaseAuth
 import Firebase
-class OrderTableViewController:UITableViewController{
+
+
+class OrderTableCell: UITableViewCell {
     
+    @IBOutlet weak var NameCell: UILabel!
+    @IBOutlet weak var AmountCell: UILabel!
+    
+    var table:OrderTableViewController?
+    
+    @IBAction func OnEditButtonPressed(_ sender: Any) {
+        table!.Getpopup()
+    }
+    
+}
+
+
+class OrderTableViewController:UITableViewController{
     
     
     let OrderCellidentifier = "OrderCell"
@@ -19,12 +34,44 @@ class OrderTableViewController:UITableViewController{
     var rest:String?
     var User:String?
     
+    @IBOutlet var BlurView: UIVisualEffectView!
+    @IBOutlet var popUpView: UIView!
+
+    
+    public func Getpopup(){
+        animateIn(neededView: BlurView)
+        animateIn(neededView: popUpView)
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        BlurView.bounds = self.view.bounds
+        popUpView.bounds = CGRect(x: 0, y: 0, width: self.view.bounds.width * 0.8, height: self.view.bounds.height * 0.5)
         navigationItem.rightBarButtonItem = editButtonItem
         navigationItem.hidesBackButton = true
         navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Back", style: .plain, target: self, action: #selector((backButtonPressed)))
+    }
+    
+    func animateIn(neededView: UIView){
+        let background = self.view!
+        background.addSubview(neededView)
+        neededView.transform = CGAffineTransform(scaleX: 1.2, y: 1.2)
+        neededView.alpha = 0
+        neededView.center = background.center
+        
+        UIView.animate(withDuration: 0.3) {
+            neededView.transform = CGAffineTransform(scaleX: 1, y: 1)
+            neededView.alpha = 1
+        }
+    }
+    
+    func animateOut(neededView: UIView){
+        UIView.animate(withDuration: 0.3, animations:  {
+            neededView.transform = CGAffineTransform(scaleX: 1.2, y: 1.2)
+            neededView.alpha = 0
+        }, completion: {_ in
+            neededView.removeFromSuperview()
+        })
     }
     
     @objc func backButtonPressed(){
@@ -36,8 +83,12 @@ class OrderTableViewController:UITableViewController{
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: OrderCellidentifier, for: indexPath)
-        cell.textLabel?.text = orders![indexPath.row].MenuItem
+        let cell = tableView.dequeueReusableCell(withIdentifier: OrderCellidentifier, for: indexPath) as! OrderTableCell
+        cell.NameCell.text = orders![indexPath.row].MenuItem
+        cell.AmountCell.text = String(orders![indexPath.row].Quantity)
+        cell.table = self
+        cell.layer.cornerRadius = cell.frame.height / 2
+        cell.layer.masksToBounds = true
         return cell
     }
     
@@ -55,3 +106,9 @@ class OrderTableViewController:UITableViewController{
         }
     }
 }
+
+/*extension OrderTableViewController: OrderCellDelegate{
+    func didPressEdit(){
+        
+    }
+}*/

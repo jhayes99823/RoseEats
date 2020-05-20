@@ -449,22 +449,65 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="OrderCell" textLabel="7so-mZ-dcz" style="IBUITableViewCellStyleDefault" id="h3X-Z1-GF1">
-                                <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="OrderCell" id="h3X-Z1-GF1" customClass="OrderTableCell" customModule="RoseEats" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="414" height="53.5"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="h3X-Z1-GF1" id="3R5-as-4Ta">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="53.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="7so-mZ-dcz">
-                                            <rect key="frame" x="20" y="0.0" width="374" height="43.5"/>
-                                            <autoresizingMask key="autoresizingMask"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OHy-LL-R6d">
+                                            <rect key="frame" x="8" y="11" width="42" height="31.5"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ucJ-TZ-3Py">
+                                            <rect key="frame" x="292" y="16.5" width="42" height="20.5"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="41U-W4-Wm7" customClass="RoundButton" customModule="RoseEats" customModuleProvider="target">
+                                            <rect key="frame" x="354" y="6" width="40" height="40.5"/>
+                                            <color key="backgroundColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="40" id="dQJ-Hp-7BU"/>
+                                                <constraint firstAttribute="width" constant="40" id="lby-Tz-U7C"/>
+                                            </constraints>
+                                            <state key="normal" title="Edit">
+                                                <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </state>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                    <real key="value" value="10"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                    <real key="value" value="0.0"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
+                                            <connections>
+                                                <action selector="OnEditButtonPressed:" destination="h3X-Z1-GF1" eventType="touchUpInside" id="hmh-dv-Uzn"/>
+                                            </connections>
+                                        </button>
                                     </subviews>
+                                    <color key="backgroundColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <constraints>
+                                        <constraint firstItem="41U-W4-Wm7" firstAttribute="leading" secondItem="ucJ-TZ-3Py" secondAttribute="trailing" constant="20" id="1cB-ci-uXJ"/>
+                                        <constraint firstItem="OHy-LL-R6d" firstAttribute="top" secondItem="3R5-as-4Ta" secondAttribute="top" constant="11" id="5OM-XQ-HFj"/>
+                                        <constraint firstAttribute="trailing" secondItem="41U-W4-Wm7" secondAttribute="trailing" constant="20" id="5sD-XH-nJ7"/>
+                                        <constraint firstItem="41U-W4-Wm7" firstAttribute="top" secondItem="3R5-as-4Ta" secondAttribute="top" constant="6" id="Adk-f4-onO"/>
+                                        <constraint firstItem="ucJ-TZ-3Py" firstAttribute="centerY" secondItem="3R5-as-4Ta" secondAttribute="centerY" id="Dqo-dd-d91"/>
+                                        <constraint firstAttribute="bottom" secondItem="41U-W4-Wm7" secondAttribute="bottom" constant="7" id="Gog-rJ-3fY"/>
+                                        <constraint firstItem="OHy-LL-R6d" firstAttribute="leading" secondItem="3R5-as-4Ta" secondAttribute="leading" constant="8" id="L20-UU-1jU"/>
+                                        <constraint firstItem="OHy-LL-R6d" firstAttribute="centerY" secondItem="3R5-as-4Ta" secondAttribute="centerY" id="cUa-zI-4my"/>
+                                        <constraint firstAttribute="bottom" secondItem="OHy-LL-R6d" secondAttribute="bottom" constant="11" id="nNh-na-4qy"/>
+                                    </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="AmountCell" destination="ucJ-TZ-3Py" id="1N2-M8-vuF"/>
+                                    <outlet property="NameCell" destination="OHy-LL-R6d" id="sPf-4v-seL"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -474,10 +517,27 @@
                     </tableView>
                     <navigationItem key="navigationItem" id="AWH-Ij-rfS"/>
                     <connections>
+                        <outlet property="BlurView" destination="7Lg-FD-dYN" id="sgY-uY-ioQ"/>
+                        <outlet property="popUpView" destination="AJY-Eq-YKt" id="bjJ-hh-RjE"/>
                         <segue destination="49e-Tb-3d3" kind="show" identifier="MainPageSegue" id="0Ne-Sc-VhQ"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aE2-DQ-65I" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <visualEffectView opaque="NO" contentMode="scaleToFill" id="7Lg-FD-dYN">
+                    <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="f0j-EE-7bW">
+                        <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                    </view>
+                    <blurEffect style="regular"/>
+                </visualEffectView>
+                <view contentMode="scaleToFill" id="AJY-Eq-YKt">
+                    <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                    <viewLayoutGuide key="safeArea" id="1Ot-Jf-eT5"/>
+                </view>
             </objects>
             <point key="canvasLocation" x="-1896" y="753"/>
         </scene>
@@ -506,7 +566,6 @@
         <!--Cutom Nav Controller-->
         <scene sceneID="MjH-KF-M6i">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="3PH-3j-8id" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="8KD-Gu-tFe" customClass="CutomNavController" customModule="RoseEats" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" barStyle="black" translucent="NO"/>
@@ -519,6 +578,7 @@
                         <segue destination="9pv-A4-QxB" kind="relationship" relationship="rootViewController" id="enS-Oe-uY3"/>
                     </connections>
                 </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3PH-3j-8id" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-704" y="-237"/>
         </scene>
@@ -528,7 +588,7 @@
         <image name="person" catalog="system" width="64" height="58"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Fb6-V8-ngd"/>
+        <segue reference="0Ne-Sc-VhQ"/>
         <segue reference="e1a-Go-cb3"/>
     </inferredMetricsTieBreakers>
 </document>
