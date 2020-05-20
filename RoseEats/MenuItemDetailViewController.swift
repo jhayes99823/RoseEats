@@ -25,10 +25,6 @@ class MenuItemDetailViewController: UIViewController {
     var orders: Order?
     var currentRest: String?
     var menuDetailpageSegue = "MenuDetailpageSegue"
-    @IBAction func pressedAddToCart(_ sender: Any) {
-        print("In the pressed function")
-        
-    }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -55,9 +51,7 @@ class MenuItemDetailViewController: UIViewController {
             }else{
                 orders!.Items.append(OrderItem(MenuItem: menuItem!.Name, Quantity: Int(quantityLabel.text!)!))
             }
-            
             (segue.destination as! CustomTabBarController).order = orders!
-            //(segue.destination as! MenuPageContentViewController).strTitle = currentRest!
         }
     }
     

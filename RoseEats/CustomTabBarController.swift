@@ -8,8 +8,7 @@
 
 import UIKit
 import  FirebaseAuth
-class CustomTabBarController: UITabBarController{    
-    let TabBarToMenuPageSegue = "TabBarToMenuPage"
+class CustomTabBarController: UITabBarController,UITabBarControllerDelegate{
     let checkCartSegue = "CheckCartSegue"
 
     var order:Order?
@@ -17,10 +16,18 @@ class CustomTabBarController: UITabBarController{
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.navigationController?.navigationItem.backBarButtonItem = UIBarButtonItem(title: "☰", style: .plain, target: self, action:nil)
-        
+        navigationItem.hidesBackButton = true
         navigationItem.rightBarButtonItem = UIBarButtonItem(title: "☰", style: .plain, target: self, action: #selector(showMenu))
-        //navigationItem.backBarButtonItem = nil
+        guard let viewcontrollers = viewControllers else{
+            return
+        }
+        
+        for viewcontroller in viewControllers!{
+            if let pagecont = viewcontroller as? MenusPageViewController{
+                pagecont.order = order
+            }
+        }
+
     }
     
     @objc func showMenu(){
@@ -37,31 +44,23 @@ class CustomTabBarController: UITabBarController{
         })
         
         alertController.addAction(UIAlertAction(title: "My Account", style: .default) { (action) in
-            //self.isShowAllMode = !self.isShowAllMode
             print("Show My Account")
-            //self.startListening()
         })
              
         
         alertController.addAction(UIAlertAction(title: "Check Cart", style: .default) { (action) in
-            //self.isShowAllMode = !self.isShowAllMode
-            print("Check Cart")
             if(self.order == nil){
                 print("EMPTY ORDER")
             }else{
                 self.performSegue(withIdentifier: self.checkCartSegue, sender: self)
             }
-            
-            //self.startListening()
         })
         
         present(alertController, animated: true, completion: nil)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == TabBarToMenuPageSegue {
-            (segue.destination as! MenusPageViewController).order = order
-        }else if segue.identifier == checkCartSegue{
+        if segue.identifier == checkCartSegue{
             (segue.destination as! OrderTableViewController).orders = order!.Items
             (segue.destination as! OrderTableViewController).rest = order!.Restaurant
             (segue.destination as! OrderTableViewController).User = order!.User

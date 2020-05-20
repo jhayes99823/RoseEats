@@ -44,7 +44,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-909" y="775"/>
+            <point key="canvasLocation" x="-814" y="754"/>
         </scene>
         <!--Menus-->
         <scene sceneID="bFe-ur-9pF">
@@ -346,7 +346,6 @@
                                     <color key="titleColor" systemColor="systemGrayColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
-                                    <action selector="pressedAddToCart:" destination="R8r-2X-Hli" eventType="touchUpInside" id="QQD-PS-4Rx"/>
                                     <segue destination="49e-Tb-3d3" kind="show" identifier="MenuDetailpageSegue" id="Fb6-V8-ngd"/>
                                 </connections>
                             </button>
@@ -411,11 +410,11 @@
             <objects>
                 <viewController id="8rJ-Kc-sve" customClass="ProfileViewController" customModule="RoseEats" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="QS5-Rx-YEW">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fed-Cu-vAe">
-                                <rect key="frame" x="131" y="755" width="152" height="30"/>
+                                <rect key="frame" x="131" y="723" width="152" height="30"/>
                                 <state key="normal" title="Sign Out">
                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                 </state>
@@ -446,7 +445,7 @@
             <objects>
                 <tableViewController id="E1x-Wz-uhu" customClass="OrderTableViewController" customModule="RoseEats" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="2Od-tQ-HBs">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <prototypes>
@@ -480,7 +479,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aE2-DQ-65I" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2720" y="427"/>
+            <point key="canvasLocation" x="-1896" y="753"/>
         </scene>
         <!--Custom Tab Bar Controller-->
         <scene sceneID="yl2-sM-qoP">
@@ -507,6 +506,7 @@
         <!--Cutom Nav Controller-->
         <scene sceneID="MjH-KF-M6i">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3PH-3j-8id" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="8KD-Gu-tFe" customClass="CutomNavController" customModule="RoseEats" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" barStyle="black" translucent="NO"/>
@@ -519,9 +519,8 @@
                         <segue destination="9pv-A4-QxB" kind="relationship" relationship="rootViewController" id="enS-Oe-uY3"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="3PH-3j-8id" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-910" y="-97"/>
+            <point key="canvasLocation" x="-704" y="-237"/>
         </scene>
     </scenes>
     <resources>
@@ -529,8 +528,7 @@
         <image name="person" catalog="system" width="64" height="58"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="ep1-oZ-6J0"/>
-        <segue reference="0Ne-Sc-VhQ"/>
+        <segue reference="Fb6-V8-ngd"/>
         <segue reference="e1a-Go-cb3"/>
     </inferredMetricsTieBreakers>
 </document>

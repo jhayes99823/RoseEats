@@ -23,12 +23,11 @@ class OrderTableViewController:UITableViewController{
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationItem.rightBarButtonItem = editButtonItem
-        navigationItem.backBarButtonItem = nil
-        //navigationItem.leftBarButtonItem
+        navigationItem.hidesBackButton = true
+        navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Back", style: .plain, target: self, action: #selector((backButtonPressed)))
     }
     
     @objc func backButtonPressed(){
-        print("BACK PRESSED")
         self.performSegue(withIdentifier: mainPageSegue, sender: self)
     }
     
@@ -42,10 +41,6 @@ class OrderTableViewController:UITableViewController{
         return cell
     }
     
-  /*  override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
-        return Auth.auth().currentUser?.uid == User
-       }*/
-    
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete{
             print(indexPath.row)
@@ -55,12 +50,8 @@ class OrderTableViewController:UITableViewController{
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        print("SEGUE BACK!!!")
         if segue.identifier == mainPageSegue {
-            for orderit in orders!{
-                print(orderit.MenuItem)
-            }
-            (segue.destination as! MenusPageViewController).order = Order(Restaurant: rest!, User: User!, Items: orders!)
+            (segue.destination as! CustomTabBarController).order = Order(Restaurant: rest!, User: User!, Items: orders!)
         }
     }
 }

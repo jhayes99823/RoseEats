@@ -36,8 +36,7 @@ class MenusPageViewController: UIPageViewController, UIPageViewControllerDataSou
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationItem.backBarButtonItem = nil
-        
-       setUpUI()
+        setUpUI()
         setupPageControl()
     }
     
