@@ -27,6 +27,9 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="Login With Rosefire"/>
+                                <connections>
+                                    <action selector="pressedRoseFireLogin:" destination="9pv-A4-QxB" eventType="touchUpInside" id="Jfs-8E-gWl"/>
+                                </connections>
                             </button>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uno-LF-axA" customClass="GIDSignInButton">
                                 <rect key="frame" x="119" y="431" width="176" height="69"/>
@@ -648,7 +651,7 @@
         <image name="person" catalog="system" width="64" height="58"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Fb6-V8-ngd"/>
+        <segue reference="AaH-qu-wLk"/>
         <segue reference="e1a-Go-cb3"/>
         <segue reference="pmy-4F-ZHP"/>
     </inferredMetricsTieBreakers>
