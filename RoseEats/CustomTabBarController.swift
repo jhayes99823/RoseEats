@@ -10,7 +10,7 @@ import UIKit
 import  FirebaseAuth
 class CustomTabBarController: UITabBarController,UITabBarControllerDelegate{
     let checkCartSegue = "CheckCartSegue"
-
+    let SignOutSegue = "signOutSegue"
     var order:Order?
     
     override func viewDidLoad() {
@@ -38,6 +38,7 @@ class CustomTabBarController: UITabBarController,UITabBarControllerDelegate{
         alertController.addAction(UIAlertAction(title: "Sign Out", style: .default) { (action) in
             do{
                 try Auth.auth().signOut()
+                self.performSegue(withIdentifier: self.SignOutSegue, sender: self)
             }catch{
                 print("SignOut Error")
             }
@@ -50,10 +51,10 @@ class CustomTabBarController: UITabBarController,UITabBarControllerDelegate{
         
         alertController.addAction(UIAlertAction(title: "Check Cart", style: .default) { (action) in
             if(self.order == nil){
-                print("EMPTY ORDER")
-            }else{
-                self.performSegue(withIdentifier: self.checkCartSegue, sender: self)
+                self.order = Order()
             }
+            self.performSegue(withIdentifier: self.checkCartSegue, sender: self)
+            
         })
         
         present(alertController, animated: true, completion: nil)

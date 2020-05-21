@@ -75,6 +75,7 @@ class OrderTableViewController:UITableViewController{
         super.viewWillAppear(animated)
         QuantityStepper.autorepeat = true
         QuantityStepper.minimumValue = 1
+        self.tableView.rowHeight = 55
     }
     
     override func viewDidLoad() {
@@ -119,6 +120,9 @@ class OrderTableViewController:UITableViewController{
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: OrderCellidentifier, for: indexPath) as! OrderTableCell
+        
+        cell.contentView.frame = CGRect(x: 0, y: 0, width: cell.contentView.frame.width, height: cell.contentView.frame.height * 0.8)
+        
         cell.NameCell.text = orders![indexPath.row].MenuItem
         cell.AmountCell.text = String(orders![indexPath.row].Quantity)
         cell.table = self

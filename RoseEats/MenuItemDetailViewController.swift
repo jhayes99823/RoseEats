@@ -42,6 +42,17 @@ class MenuItemDetailViewController: UIViewController {
         imageView.image = UIImage(named: menuItem!.ImageName)
     }
     
+    func existsinOrder(MenutemName: String) -> Int{
+        var i = 0
+        for item in orders!.Items{
+            if(item.MenuItem == MenutemName){
+                return i
+            }
+            i+=1
+        }
+        return -1
+    }
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == menuDetailpageSegue {
             if(orders == nil){
@@ -49,7 +60,12 @@ class MenuItemDetailViewController: UIViewController {
                 orderItems.append(OrderItem(MenuItem: menuItem!.Name, Quantity: Int(quantityLabel.text!)!))
                 orders = Order(Restaurant: currentRest!, User: Auth.auth().currentUser!.uid, Items: orderItems)
             }else{
-                orders!.Items.append(OrderItem(MenuItem: menuItem!.Name, Quantity: Int(quantityLabel.text!)!))
+                let i = existsinOrder(MenutemName: menuItem!.Name)
+                if(i != -1){
+                    orders!.Items[i].Quantity = Int(quantityLabel.text!)!
+                }else{
+                    orders!.Items.append(OrderItem(MenuItem: menuItem!.Name, Quantity: Int(quantityLabel.text!)!))
+                }
             }
             (segue.destination as! CustomTabBarController).order = orders!
         }

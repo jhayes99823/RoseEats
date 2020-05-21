@@ -25,6 +25,13 @@ class Order {
     var Restaurant: String
     var id: String
     
+    init(){
+        self.Restaurant = ""
+        self.User = ""
+        self.Items = [OrderItem]()
+        self.id = ""
+    }
+    
     init(Restaurant: String, User: String, Items: [OrderItem]) {
         self.Restaurant = Restaurant
         self.User = User
