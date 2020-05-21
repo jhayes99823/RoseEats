@@ -64,14 +64,20 @@ class CustomTabBarController: UITabBarController,UITabBarControllerDelegate{
             }
         })
         
-        alertController.addAction(UIAlertAction(title: "My Account", style: .default) { (action) in
-            print("Show My Account")
-        })
+//        alertController.addAction(UIAlertAction(title: "My Account", style: .default) { (action) in
+//            //self.isShowAllMode = !self.isShowAllMode
+//            print("Show My Account")
+//            //self.startListening()
+//        })
              
-        
-        alertController.addAction(UIAlertAction(title: "Check Cart", style: .default) { (action) in
+    
+    alertController.addAction(UIAlertAction(title: "Check Cart", style: .default) { (action) in
+            //self.isShowAllMode = !self.isShowAllMode
+            print("Check Cart")
             if(self.order == nil){
-                self.order = Order()
+                print("EMPTY ORDER")
+            }else{
+                self.performSegue(withIdentifier: self.checkCartSegue, sender: self)
             }
             self.performSegue(withIdentifier: self.checkCartSegue, sender: self)
             
