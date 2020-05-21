@@ -24,10 +24,35 @@ class MenuItemDetailViewController: UIViewController {
     var menuItem: MenuItem?
     var orders: Order?
     var currentRest: String?
+    
     var menuDetailpageSegue = "MenuDetailpageSegue"
+    var addMoreToOrderSegue = "AddMoreToOrderSegue"
+    var reviewOrderSegue = "ReviewOrderSegue"
+    
     @IBAction func pressedAddToCart(_ sender: Any) {
         print("In the pressed function")
         
+        if(orders == nil){
+                       var orderItems = [OrderItem]()
+                       orderItems.append(OrderItem(MenuItem: menuItem!.Name, Quantity: Int(quantityLabel.text!)!))
+                       orders = Order(Restaurant: currentRest!, User: Auth.auth().currentUser!.uid, Items: orderItems)
+                   }else{
+                       orders!.Items.append(OrderItem(MenuItem: menuItem!.Name, Quantity: Int(quantityLabel.text!)!))
+                   }
+        
+        let nextActionALert = UIAlertController(title: "Item(s) was added to your order!", message: "Where to next?", preferredStyle: .alert)
+        
+        nextActionALert.addAction(UIAlertAction(title: "Return To Menu", style: .default, handler: { (action) in
+            self.performSegue(withIdentifier: self.menuDetailpageSegue, sender: self)
+        }))
+        
+        nextActionALert.addAction(UIAlertAction(title: "Review Order", style: .default, handler: { (action) in
+            self.performSegue(withIdentifier: self.reviewOrderSegue, sender: self)
+        }))
+        
+        nextActionALert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
+        
+        self.present(nextActionALert, animated: true)
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -58,6 +83,10 @@ class MenuItemDetailViewController: UIViewController {
             
             (segue.destination as! CustomTabBarController).order = orders!
             //(segue.destination as! MenuPageContentViewController).strTitle = currentRest!
+        } else if (segue.identifier == reviewOrderSegue) {
+            (segue.destination as! OrderTableViewController).orders = orders!.Items
+            (segue.destination as! OrderTableViewController).rest = orders!.Restaurant
+            (segue.destination as! OrderTableViewController).User = orders!.User
         }
     }
     
