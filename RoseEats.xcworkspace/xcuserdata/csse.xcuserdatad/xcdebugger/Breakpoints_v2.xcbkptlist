@@ -172,7 +172,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "40"
             endingLineNumber = "40"
-            landmarkName = "init(documentSnapShot:)"
+            landmarkName = "init(Restaurant:User:Items:)"
             landmarkType = "7">
             <Locations>
                <Location
@@ -220,7 +220,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "42"
             endingLineNumber = "42"
-            landmarkName = "init(documentSnapShot:)"
+            landmarkName = "init(Restaurant:User:Items:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
