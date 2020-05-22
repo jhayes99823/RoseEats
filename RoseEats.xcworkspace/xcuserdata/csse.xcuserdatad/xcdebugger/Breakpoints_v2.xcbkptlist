@@ -15,9 +15,7 @@
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "110"
-            endingLineNumber = "110"
-            landmarkName = "MenuPageContentViewController"
-            landmarkType = "3">
+            endingLineNumber = "110">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -220,7 +218,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "42"
             endingLineNumber = "42"
-            landmarkName = "init(Restaurant:User:Items:)"
+            landmarkName = "init(documentSnapShot:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
