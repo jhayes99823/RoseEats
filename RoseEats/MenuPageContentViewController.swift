@@ -39,19 +39,12 @@ class MenuPageContentViewController: UIViewController, UITableViewDelegate, UITa
     
     override func viewDidLoad() {
         super.viewDidLoad()
-                
         restaurantRef = Firestore.firestore().collection("Restaurant")
         menuItemRef = Firestore.firestore().collection("MenuItem")
-
         tableView.delegate = self
         tableView.dataSource = self
-        
-//        tableView.register(MenuTableCell.self, forCellReuseIdentifier: menuPageTableCellID)
-
         titleLabel.text = strTitle
     }
-    
-    
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -81,7 +74,7 @@ class MenuPageContentViewController: UIViewController, UITableViewDelegate, UITa
     override func viewWillDisappear(_ animated: Bool) {
            super.viewWillDisappear(animated)
            restaurantListener.remove()
-       }
+    }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return self.menuItems.count
@@ -89,7 +82,6 @@ class MenuPageContentViewController: UIViewController, UITableViewDelegate, UITa
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: menuPageTableCellID) as! MenuTableCell
-        
         cell.menuItemLabel?.text = self.menuItems[indexPath.row].Name
         cell.menuItemImageView?.image = UIImage(named: self.menuItems[indexPath.row].ImageName)
         cell.layer.cornerRadius = cell.frame.height / 2
