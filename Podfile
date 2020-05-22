@@ -10,5 +10,4 @@ target 'RoseEats' do
 	pod 'Firebase/Auth'
 	pod 'Firebase/Firestore'
   pod 'GoogleSignIn'
-  pod 'Rosefire', :git => 'https://ada.csse.rose-hulman.edu/rosefire/ios-sdk.git'
 end

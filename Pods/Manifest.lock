@@ -354,14 +354,12 @@ PODS:
   - nanopb/decode (1.30905.0)
   - nanopb/encode (1.30905.0)
   - PromisesObjC (1.2.8)
-  - Rosefire (3.0.0beta)
 
 DEPENDENCIES:
   - Firebase/Analytics
   - Firebase/Auth
   - Firebase/Firestore
   - GoogleSignIn
-  - Rosefire (from `https://ada.csse.rose-hulman.edu/rosefire/ios-sdk.git`)
 
 SPEC REPOS:
   trunk:
@@ -390,15 +388,6 @@ SPEC REPOS:
     - nanopb
     - PromisesObjC
 
-EXTERNAL SOURCES:
-  Rosefire:
-    :git: https://ada.csse.rose-hulman.edu/rosefire/ios-sdk.git
-
-CHECKOUT OPTIONS:
-  Rosefire:
-    :commit: a7e348fb25e802890f2b9075a123fa3efd0a97f4
-    :git: https://ada.csse.rose-hulman.edu/rosefire/ios-sdk.git
-
 SPEC CHECKSUMS:
   abseil: 6c8eb7892aefa08d929b39f9bb108e5367e3228f
   AppAuth: 73574f3013a1e65b9601a3ddc8b3158cce68c09d
@@ -424,8 +413,7 @@ SPEC CHECKSUMS:
   leveldb-library: 55d93ee664b4007aac644a782d11da33fba316f7
   nanopb: c43f40fadfe79e8b8db116583945847910cbabc9
   PromisesObjC: c119f3cd559f50b7ae681fa59dc1acd19173b7e6
-  Rosefire: 9cb4c5447b71302962bd0c2beca22f320689c326
 
-PODFILE CHECKSUM: 4ee4a8a5bc4f50447565e1f9df89495bad0e1b90
+PODFILE CHECKSUM: 46b2f6cf9f947f05bd5fe956529620fa148aa969
 
 COCOAPODS: 1.9.1

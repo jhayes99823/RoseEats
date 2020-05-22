@@ -46,6 +46,9 @@ class FigmaMenuPageContentViewController: UIViewController, UITableViewDelegate,
         
         tableView.delegate = self
         tableView.dataSource = self
+        
+//        tableView.register(MenuTableCell.self, forCellReuseIdentifier: menuPageTableCellID)
+
         titleLabel.text = strTitle
     }
     
@@ -83,6 +86,9 @@ class FigmaMenuPageContentViewController: UIViewController, UITableViewDelegate,
             )
             self.tableView.reloadData()
         }
+        //getMenuforRestaurant()
+        
+        
     }
     
     override func viewWillDisappear(_ animated: Bool) {

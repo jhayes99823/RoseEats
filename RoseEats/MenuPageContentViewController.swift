@@ -10,13 +10,13 @@ import UIKit
 import Firebase
 
 class MenuTableCell: UITableViewCell {
+    
     @IBOutlet weak var menuItemImageView: UIImageView!
     @IBOutlet weak var menuItemLabel: UILabel!
 }
 
 class MenuPageContentViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     var menuDetailpageSegue = "ShowMenuItemDetailView"
-
     
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var tableView: UITableView!
@@ -24,7 +24,6 @@ class MenuPageContentViewController: UIViewController, UITableViewDelegate, UITa
     let animals: [String] = ["Horse", "Cow", "Camel", "Sheep", "Goat"]
     var restaurants = [Restaurant]()
     var menuItems = [MenuItem]()
-    var order: Order?
     
     var restaurantRef: CollectionReference!
     var restaurantListener: ListenerRegistration!
@@ -39,10 +38,17 @@ class MenuPageContentViewController: UIViewController, UITableViewDelegate, UITa
     
     override func viewDidLoad() {
         super.viewDidLoad()
+                
         restaurantRef = Firestore.firestore().collection("Restaurant")
         menuItemRef = Firestore.firestore().collection("MenuItem")
+        
+        navigationItem.backBarButtonItem = nil
+        
         tableView.delegate = self
         tableView.dataSource = self
+        
+//        tableView.register(MenuTableCell.self, forCellReuseIdentifier: menuPageTableCellID)
+
         titleLabel.text = strTitle
     }
     
@@ -74,7 +80,7 @@ class MenuPageContentViewController: UIViewController, UITableViewDelegate, UITa
     override func viewWillDisappear(_ animated: Bool) {
            super.viewWillDisappear(animated)
            restaurantListener.remove()
-    }
+       }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return self.menuItems.count
@@ -82,10 +88,9 @@ class MenuPageContentViewController: UIViewController, UITableViewDelegate, UITa
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: menuPageTableCellID) as! MenuTableCell
+        
         cell.menuItemLabel?.text = self.menuItems[indexPath.row].Name
         cell.menuItemImageView?.image = UIImage(named: self.menuItems[indexPath.row].ImageName)
-        cell.layer.cornerRadius = cell.frame.height / 2
-        cell.layer.masksToBounds = true
                 
         return cell
     }
@@ -94,8 +99,6 @@ class MenuPageContentViewController: UIViewController, UITableViewDelegate, UITa
         if segue.identifier == menuDetailpageSegue {
             if let indexPath = tableView.indexPathForSelectedRow {
                 (segue.destination as! MenuItemDetailViewController).menuItem = menuItems[indexPath.row]
-                (segue.destination as! MenuItemDetailViewController).orders = order
-                (segue.destination as! MenuItemDetailViewController).currentRest = strTitle
             }
         }
     }
