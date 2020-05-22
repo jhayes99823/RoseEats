@@ -22,22 +22,17 @@ class MenuItemDetailViewController: UIViewController {
     
     @IBOutlet weak var addToCartButton: UIButton!
     var menuItem: MenuItem?
-<<<<<<< HEAD
-=======
+
     var orders: Order?
     var currentRest: String?
     
     var menuDetailpageSegue = "MenuDetailpageSegue"
     var addMoreToOrderSegue = "AddMoreToOrderSegue"
     var reviewOrderSegue = "ReviewOrderSegue"
->>>>>>> back-to-start
     
     @IBAction func pressedAddToCart(_ sender: Any) {
     }
-<<<<<<< HEAD
-=======
 
->>>>>>> back-to-start
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -54,8 +49,7 @@ class MenuItemDetailViewController: UIViewController {
         pageTitle.text = menuItem?.Name
         imageView.image = UIImage(named: menuItem!.ImageName)
     }
-<<<<<<< HEAD
-=======
+
     
     func existsinOrder(MenutemName: String) -> Int{
         var i = 0
@@ -92,5 +86,4 @@ class MenuItemDetailViewController: UIViewController {
         }
     }
     
->>>>>>> back-to-start
 }
