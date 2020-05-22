@@ -29,5 +29,4 @@ class RoundButton: UIButton {
             self.layer.borderColor = borderColor.cgColor
         }
     }
-
 }
