@@ -13,6 +13,26 @@ class CustomTabBarController: UITabBarController,UITabBarControllerDelegate{
     let SignOutSegue = "signOutSegue"
     var order:Order?
     
+    var authListenerHandle: AuthStateDidChangeListenerHandle!
+
+
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        authListenerHandle = Auth.auth().addStateDidChangeListener({ (auth, user) in
+            if (Auth.auth().currentUser == nil) {
+                print("go to login oage")
+                self.navigationController?.popToRootViewController(animated: true)
+            } else {
+                print("toure signin in")
+            }
+        })
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        Auth.auth().removeStateDidChangeListener(authListenerHandle)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -44,14 +64,20 @@ class CustomTabBarController: UITabBarController,UITabBarControllerDelegate{
             }
         })
         
-        alertController.addAction(UIAlertAction(title: "My Account", style: .default) { (action) in
-            print("Show My Account")
-        })
+//        alertController.addAction(UIAlertAction(title: "My Account", style: .default) { (action) in
+//            //self.isShowAllMode = !self.isShowAllMode
+//            print("Show My Account")
+//            //self.startListening()
+//        })
              
-        
-        alertController.addAction(UIAlertAction(title: "Check Cart", style: .default) { (action) in
+    
+    alertController.addAction(UIAlertAction(title: "Check Cart", style: .default) { (action) in
+            //self.isShowAllMode = !self.isShowAllMode
+            print("Check Cart")
             if(self.order == nil){
-                self.order = Order()
+                print("EMPTY ORDER")
+            }else{
+                self.performSegue(withIdentifier: self.checkCartSegue, sender: self)
             }
             self.performSegue(withIdentifier: self.checkCartSegue, sender: self)
             

@@ -17,10 +17,15 @@ class OrderItem {
         self.MenuItem = MenuItem
         self.Quantity = Quantity
     }
+    
+    init(dictionary: [String : Any]) {
+        self.MenuItem = dictionary["MenuItem"] as! String
+        self.Quantity = dictionary["Quantity"] as! Int
+    }
 }
 
 class Order {
-    var Items: [ OrderItem]
+    var Items: [OrderItem]
     var User: String
     var Restaurant: String
     var id: String
@@ -42,7 +47,15 @@ class Order {
     init(documentSnapShot: DocumentSnapshot) {
         self.id = documentSnapShot.documentID
         let data = documentSnapShot.data()!
-        self.Items = data["Items"] as! [OrderItem]
+        self.Items = [OrderItem]()
+        
+        let temp = data["Items"] as! NSArray
+        
+        for ele in temp {
+            var convert = ele as! NSDictionary
+            Items.append(OrderItem(dictionary: convert as! [String : Any]))
+        }
+        
         self.User = data["User"] as! String
         self.Restaurant = data["Restaurant"] as! String
     }
