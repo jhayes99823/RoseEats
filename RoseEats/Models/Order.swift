@@ -12,15 +12,18 @@ import Firebase
 class OrderItem {
     var MenuItem: String
     var Quantity: Int
+    var Name: String
     
-    init(MenuItem: String, Quantity: Int) {
+    init(MenuItem: String, Quantity: Int, Name: String) {
         self.MenuItem = MenuItem
         self.Quantity = Quantity
+        self.Name = Name
     }
     
     init(dictionary: [String : Any]) {
         self.MenuItem = dictionary["MenuItem"] as! String
         self.Quantity = dictionary["Quantity"] as! Int
+        self.Name = ""
     }
 }
 

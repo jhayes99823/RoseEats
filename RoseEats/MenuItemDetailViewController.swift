@@ -34,10 +34,10 @@ class MenuItemDetailViewController: UIViewController {
         
         if(orders == nil){
                        var orderItems = [OrderItem]()
-                       orderItems.append(OrderItem(MenuItem: menuItem!.Name, Quantity: Int(quantityLabel.text!)!))
+            orderItems.append(OrderItem(MenuItem: menuItem!.id, Quantity: Int(quantityLabel.text!)!, Name: menuItem!.Name))
                        orders = Order(Restaurant: currentRest!, User: Auth.auth().currentUser!.uid, Items: orderItems)
                    }else{
-                       orders!.Items.append(OrderItem(MenuItem: menuItem!.Name, Quantity: Int(quantityLabel.text!)!))
+            orders!.Items.append(OrderItem(MenuItem: menuItem!.id, Quantity: Int(quantityLabel.text!)!, Name: menuItem!.Name))
                    }
         
         let nextActionALert = UIAlertController(title: "Item(s) was added to your order!", message: "Where to next?", preferredStyle: .alert)
@@ -87,14 +87,14 @@ class MenuItemDetailViewController: UIViewController {
         if segue.identifier == menuDetailpageSegue {
             if(orders == nil){
                 var orderItems = [OrderItem]()
-                orderItems.append(OrderItem(MenuItem: menuItem!.Name, Quantity: Int(quantityLabel.text!)!))
+                orderItems.append(OrderItem(MenuItem: menuItem!.id, Quantity: Int(quantityLabel.text!)!, Name: menuItem!.Name))
                 orders = Order(Restaurant: currentRest!, User: Auth.auth().currentUser!.uid, Items: orderItems)
             }else{
                 let i = existsinOrder(MenutemName: menuItem!.Name)
                 if(i != -1){
                     orders!.Items[i].Quantity = Int(quantityLabel.text!)!
                 }else{
-                    orders!.Items.append(OrderItem(MenuItem: menuItem!.Name, Quantity: Int(quantityLabel.text!)!))
+                    orders!.Items.append(OrderItem(MenuItem: menuItem!.id, Quantity: Int(quantityLabel.text!)!, Name: menuItem!.Name))
                 }
             }
             (segue.destination as! CustomTabBarController).order = orders!

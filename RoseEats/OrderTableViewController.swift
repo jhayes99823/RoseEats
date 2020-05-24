@@ -27,12 +27,18 @@ class OrderTableCell: UITableViewCell {
 
 class OrderTableViewController:UITableViewController{
     
-    
     let OrderCellidentifier = "OrderCell"
     let mainPageSegue = "MainPageSegue"
     var orders: [OrderItem]?
     var rest:String?
     var User:String?
+    var totalCost: Float = 0.0
+    var costArr = [Float]()
+    
+    var orderRef: CollectionReference!
+    var menuItemRef: CollectionReference!
+    
+    var confirmationPageSegueID = "ConfirmationPageSegue"
     
     @IBOutlet var BlurView: UIVisualEffectView!
     @IBOutlet var popUpView: UIView!
@@ -40,9 +46,21 @@ class OrderTableViewController:UITableViewController{
     @IBOutlet weak var popupItemName: UILabel!
     @IBOutlet weak var QuantityStepper: UIStepper!
     @IBOutlet weak var quantityLabel: UILabel!
+    
     @IBAction func StepperValueChanged(_ sender: Any) {
         quantityLabel.text = Int((sender as! UIStepper).value).description
         print((sender as! UIStepper).value)
+    }
+    
+    func getCostArr() {
+        for orderitem in orders! {
+            _ = menuItemRef.document(orderitem.MenuItem).getDocument {
+                (document, error ) in if let document = document, document.exists {
+                    self.costArr.removeAll()
+                    self.costArr.append((document.data()!["Price"] as! Float) * Float(orderitem.Quantity))
+                }
+            }
+        }
     }
     
     @IBAction func pressedDone(_ sender: Any) {
@@ -76,16 +94,76 @@ class OrderTableViewController:UITableViewController{
         QuantityStepper.autorepeat = true
         QuantityStepper.minimumValue = 1
         self.tableView.rowHeight = 55
+        print("view will appear")
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        print("view did appear")
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        orderRef = Firestore.firestore().collection("Orders")
+        menuItemRef = Firestore.firestore().collection("MenuItem")
         BlurView.bounds = CGRect(x: 0, y: 0, width: self.view.bounds.width*1.2, height: self.view.bounds.height*1.2)
         popUpView.bounds = CGRect(x: 0, y: 0, width: self.view.bounds.width * 0.7, height: self.view.bounds.height * 0.3)
         popUpView.layer.cornerRadius = 20
-        navigationItem.rightBarButtonItem = editButtonItem
+        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Review", style: .plain, target: self, action: #selector(showMenu))//editButtonItem
         navigationItem.hidesBackButton = true
         navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Back", style: .plain, target: self, action: #selector((backButtonPressed)))
+       print("view did load")
+        getCostArr()
+    }
+    
+    @objc func showMenu() {
+        let alertController = UIAlertController(title: nil, message: nil, preferredStyle: .alert)
+        
+        let checkoutAction = UIAlertAction(title: "Check Out", style: .default) { (action) in
+            self.showCheckoutDialog()
+        }
+        
+        alertController.addAction(checkoutAction)
+        
+        present(alertController, animated: true, completion: nil)
+    }
+    
+    func transform(item: OrderItem) -> [String : Any] {
+        return [
+            "MenuItem": item.MenuItem,
+            "Quantity": item.Quantity
+        ]
+    }
+    
+    func getOrderItemAsObj(orderedItems: [OrderItem]) -> [[String : Any]] {
+        var array = [[String : Any]]()
+        for item in orderedItems {
+            array.append(transform(item: item))
+        }
+        
+        return array
+    }
+    
+    func showCheckoutDialog() {
+        let alertController = UIAlertController(title: "Are you sure?", message: "", preferredStyle: .alert)
+
+        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+        alertController.addAction(cancelAction)
+        
+        let payAction = UIAlertAction(title: "Check Out", style: .default) { (action) in
+            print("what is the totl cost i'm sendin \(self.costArr[0])")
+            self.orderRef.addDocument(data: [
+                "Date": Timestamp.init(),
+                "Restaurant": self.rest!,
+                "User": self.User!,
+                "Items": self.getOrderItemAsObj(orderedItems: self.orders!),
+                "TotalCost": self.costArr.reduce(0, +)
+            ])
+            self.performSegue(withIdentifier: self.confirmationPageSegueID, sender: self)
+        }
+        alertController.addAction(payAction)
+        
+        present(alertController, animated: true, completion: nil)
     }
     
     func animateIn(neededView: UIView){
@@ -123,7 +201,7 @@ class OrderTableViewController:UITableViewController{
         
         cell.contentView.frame = CGRect(x: 0, y: 0, width: cell.contentView.frame.width, height: cell.contentView.frame.height * 0.8)
         
-        cell.NameCell.text = orders![indexPath.row].MenuItem
+        cell.NameCell.text = orders![indexPath.row].Name
         cell.AmountCell.text = String(orders![indexPath.row].Quantity)
         cell.table = self
         cell.layer.cornerRadius = cell.frame.height / 2
