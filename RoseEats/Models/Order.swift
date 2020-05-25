@@ -32,12 +32,16 @@ class Order {
     var User: String
     var Restaurant: String
     var id: String
+    var TotalCost: Float
+    var Date: Timestamp
     
     init(){
         self.Restaurant = ""
         self.User = ""
         self.Items = [OrderItem]()
         self.id = ""
+        self.TotalCost = 0.0
+        self.Date = Timestamp.init()
     }
     
     init(Restaurant: String, User: String, Items: [OrderItem]) {
@@ -45,6 +49,8 @@ class Order {
         self.User = User
         self.Items = Items
         self.id = ""
+        self.TotalCost = 0.0
+        self.Date = Timestamp.init()
     }
     
     init(documentSnapShot: DocumentSnapshot) {
@@ -61,5 +67,7 @@ class Order {
         
         self.User = data["User"] as! String
         self.Restaurant = data["Restaurant"] as! String
+        self.TotalCost = data["TotalCost"] as! Float
+        self.Date = data["Date"] as! Timestamp
     }
 }

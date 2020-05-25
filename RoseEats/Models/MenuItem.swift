@@ -12,7 +12,7 @@ import Firebase
 class MenuItem {
     var id: String!
     var Name: String!
-    var Price: Float!
+    var Price: Float?
     var WhereServed: [String]!
     var ImageName: String!
     
@@ -20,7 +20,8 @@ class MenuItem {
         self.id = documentSnapShot.documentID
         let data = documentSnapShot.data()!
         self.Name = (data["Name"] as! String)
-        self.Price = data["Location"] as? Float
+        self.Price = data["Price"] as? Float
+        print("what is the price being set for this menu item rn \(self.Name) \(self.Price)")
         self.WhereServed = data["WhereServed"] as? [String]
         self.ImageName = data["ImageName"] as? String
     }

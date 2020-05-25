@@ -34,6 +34,8 @@ class ProfileViewController: UIViewController, UITableViewDataSource, UITableVie
         
         tableView.delegate = self
         tableView.dataSource = self
+        
+        self.tableView.tableFooterView = UIView()
     }
 
     override func viewWillAppear(_ animated: Bool) {
@@ -63,19 +65,26 @@ class ProfileViewController: UIViewController, UITableViewDataSource, UITableVie
         print(previousOrders[indexPath.row])
         cell.restName.text = previousOrders[indexPath.row].Restaurant
 
-        cell.dateOrdered.text = "May 12, 1921"
+        let predate = previousOrders[indexPath.row].Date.dateValue()
+        let dateFormatterGet = DateFormatter()
+        dateFormatterGet.dateFormat = "yyyy-MM-dd HH:mm:ss"
+
+        let dateFormatterPrint = DateFormatter()
+        dateFormatterPrint.dateFormat = "dd-MM-yyyy"
         
-        cell.totalCost.text = "652.12"
+        cell.dateOrdered.text = dateFormatterPrint.string(from: predate)
+        
+        cell.totalCost.text = String(format: "$%.2f", previousOrders[indexPath.row].TotalCost)
         
         return cell
     }
     
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if (segue.identifier == showPreviousOrderDetailSegue) {
-            if let indexPath = tableView.indexPathForSelectedRow {
-                           (segue.destination as! PreviousOrderDetailViewController).order = previousOrders[indexPath.row]
-            }
-        }
-    }
+//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//        if (segue.identifier == showPreviousOrderDetailSegue) {
+//            if let indexPath = tableView.indexPathForSelectedRow {
+//                           (segue.destination as! PreviousOrderDetailViewController).order = previousOrders[indexPath.row]
+//            }
+//        }
+//    }
 }
 
