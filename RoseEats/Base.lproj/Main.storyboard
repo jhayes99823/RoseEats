@@ -397,6 +397,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="jcp-fl-h4v"/>
                     <connections>
+                        <outlet property="ImageView" destination="K7r-6Z-6Ah" id="Lnm-3x-Ql0"/>
                         <outlet property="addToCartButton" destination="LFM-CR-jqm" id="jsn-r5-FSL"/>
                         <outlet property="imageView" destination="K7r-6Z-6Ah" id="h0U-4m-tu1"/>
                         <outlet property="pageTitle" destination="3le-lB-Er7" id="M3N-HM-VWs"/>
@@ -786,7 +787,7 @@
         <image name="person" catalog="system" width="64" height="58"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="0Ne-Sc-VhQ"/>
+        <segue reference="HIp-6U-Hyd"/>
         <segue reference="6eX-GV-D67"/>
         <segue reference="e1a-Go-cb3"/>
         <segue reference="pmy-4F-ZHP"/>

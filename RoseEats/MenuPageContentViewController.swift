@@ -48,6 +48,7 @@ class MenuPageContentViewController: UIViewController, UITableViewDelegate, UITa
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        print("The strTitle = \(self.strTitle!)")
         restaurantListener = restaurantRef.order(by: "Name").addSnapshotListener {
                    (querySnapShot, error) in if let querySnapShot = querySnapShot {
                        self.restaurants.removeAll()
@@ -83,7 +84,22 @@ class MenuPageContentViewController: UIViewController, UITableViewDelegate, UITa
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: menuPageTableCellID) as! MenuTableCell
         cell.menuItemLabel?.text = self.menuItems[indexPath.row].Name
-        cell.menuItemImageView?.image = UIImage(named: self.menuItems[indexPath.row].ImageName)
+        if let imgString = self.menuItems[indexPath.row].ImageName {
+                    if let imgUrl = URL(string: imgString) {
+                      DispatchQueue.global().async { // Download in the background
+                        do {
+                          let data = try Data(contentsOf: imgUrl)
+                          DispatchQueue.main.async { // Then update on main thread
+                            cell.menuItemImageView?.image = UIImage(data: data)
+                          }
+                        } catch {
+                          print("Error downloading image: \(error)")
+                        }
+                      }
+                    }
+        
+                  }
+        cell.menuItemImageView!.layer.cornerRadius = 50
         cell.layer.cornerRadius = cell.frame.height / 2
         cell.layer.masksToBounds = true
                 
