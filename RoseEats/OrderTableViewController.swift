@@ -56,8 +56,10 @@ class OrderTableViewController:UITableViewController{
         for orderitem in orders! {
             _ = menuItemRef.document(orderitem.MenuItem).getDocument {
                 (document, error ) in if let document = document, document.exists {
+                    print("The DOcument \(document.data())")
+                    print("The price: \(document.data()!["Price"])")
                     self.costArr.removeAll()
-                    self.costArr.append((document.data()!["Price"] as! Float) * Float(orderitem.Quantity))
+                    self.costArr.append(Float((document.data()!["Price"] as! Double) * Double(orderitem.Quantity)))
                 }
             }
         }

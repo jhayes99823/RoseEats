@@ -510,19 +510,19 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Order Being Prepared Now" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xQJ-8L-oM8">
-                                <rect key="frame" x="20" y="20" width="374" height="26.5"/>
+                                <rect key="frame" x="20" y="76" width="374" height="26.5"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lzb-56-kfO">
-                                <rect key="frame" x="20" y="66.5" width="374" height="24"/>
+                                <rect key="frame" x="20" y="122.5" width="374" height="24"/>
                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="greenCheck.png" translatesAutoresizingMaskIntoConstraints="NO" id="0s9-za-lSk">
-                                <rect key="frame" x="20" y="204" width="374" height="400"/>
+                                <rect key="frame" x="20" y="232" width="374" height="400"/>
                                 <color key="backgroundColor" red="0.96862745100000003" green="0.96862745100000003" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="400" id="3sm-Kn-kVL"/>
@@ -537,13 +537,13 @@
                                 </state>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6ZE-1q-nFA">
-                                <rect key="frame" x="300" y="684" width="94" height="30"/>
+                                <rect key="frame" x="300" y="712" width="94" height="30"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Back to Menu">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <segue destination="Gwb-TN-uqN" kind="show" identifier="GoHomeSegue" id="Iuq-cb-Mba"/>
+                                    <action selector="pressedBackToHomeButton:" destination="CY9-e8-2DA" eventType="touchUpInside" id="5Ae-it-M6g"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -567,10 +567,13 @@
                         <viewLayoutGuide key="safeArea" id="LlO-ci-94T"/>
                     </view>
                     <navigationItem key="navigationItem" id="i77-FD-tqV"/>
+                    <connections>
+                        <segue destination="49e-Tb-3d3" kind="show" identifier="GoHomeSegue" id="Ibj-oa-4We"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BRb-vX-3ru" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2665.217391304348" y="822.99107142857144"/>
+            <point key="canvasLocation" x="-2772" y="1404"/>
         </scene>
         <!--Order Table View Controller-->
         <scene sceneID="OVJ-s3-J1u">
@@ -783,10 +786,9 @@
         <image name="person" catalog="system" width="64" height="58"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="HIp-6U-Hyd"/>
-        <segue reference="6eX-GV-D67"/>
+        <segue reference="Ibj-oa-4We"/>
+        <segue reference="ep1-oZ-6J0"/>
         <segue reference="e1a-Go-cb3"/>
-        <segue reference="oml-ab-AGJ"/>
         <segue reference="pmy-4F-ZHP"/>
     </inferredMetricsTieBreakers>
 </document>

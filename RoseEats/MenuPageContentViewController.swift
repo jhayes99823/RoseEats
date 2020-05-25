@@ -33,7 +33,7 @@ class MenuPageContentViewController: UIViewController, UITableViewDelegate, UITa
     var menuItemListener: ListenerRegistration!
     
     var pageIndex: Int!
-    var strTitle: String!
+    var strTitle: String! = "Beanies"
     
     var menuPageTableCellID = "MenuItemCell"
     
