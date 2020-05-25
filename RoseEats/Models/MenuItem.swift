@@ -21,7 +21,6 @@ class MenuItem {
         let data = documentSnapShot.data()!
         self.Name = (data["Name"] as! String)
         self.Price = data["Price"] as? Float
-        print("what is the price being set for this menu item rn \(self.Name) \(self.Price)")
         self.WhereServed = data["WhereServed"] as? [String]
         self.ImageName = data["ImageName"] as? String
     }
