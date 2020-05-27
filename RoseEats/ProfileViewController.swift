@@ -78,13 +78,5 @@ class ProfileViewController: UIViewController, UITableViewDataSource, UITableVie
         
         return cell
     }
-    
-//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//        if (segue.identifier == showPreviousOrderDetailSegue) {
-//            if let indexPath = tableView.indexPathForSelectedRow {
-//                           (segue.destination as! PreviousOrderDetailViewController).order = previousOrders[indexPath.row]
-//            }
-//        }
-//    }
 }
 

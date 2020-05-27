@@ -28,7 +28,7 @@ class MenuItemDetailViewController: UIViewController {
     var menuDetailpageSegue = "MenuDetailpageSegue"
     var addMoreToOrderSegue = "AddMoreToOrderSegue"
     var reviewOrderSegue = "ReviewOrderSegue"
-    
+        
     @IBAction func pressedAddToCart(_ sender: Any) {
         print("In the pressed function")
         
@@ -82,9 +82,13 @@ class MenuItemDetailViewController: UIViewController {
         updateView()
     }
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        updateView()
+    }
+    
     func updateView() {
         pageTitle.text = menuItem?.Name
-        //imageView.image = UIImage(named: menuItem!.ImageName)
     }
     
     func existsinOrder(MenutemName: String) -> Int{
@@ -101,7 +105,6 @@ class MenuItemDetailViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == menuDetailpageSegue {
             (segue.destination as! CustomTabBarController).order = orders!
-            //(segue.destination as! MenuPageContentViewController).strTitle = currentRest!
         } else if (segue.identifier == reviewOrderSegue) {
             (segue.destination as! OrderTableViewController).orders = orders!.Items
             (segue.destination as! OrderTableViewController).rest = orders!.Restaurant

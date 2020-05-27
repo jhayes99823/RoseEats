@@ -227,7 +227,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="0Yz-fh-Nub">
-                                <rect key="frame" x="20" y="271" width="374" height="301"/>
+                                <rect key="frame" x="20" y="215" width="374" height="406"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <color key="sectionIndexBackgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <prototypes>
@@ -279,7 +279,7 @@
                                 </prototypes>
                             </tableView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Previous Orders" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cgC-JB-57A">
-                                <rect key="frame" x="20" y="142" width="374" height="53"/>
+                                <rect key="frame" x="20" y="86" width="374" height="53"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="44"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -300,6 +300,7 @@
                         <viewLayoutGuide key="safeArea" id="O1u-W8-tvY"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Profile" image="person" catalog="system" id="cPa-gy-q4n"/>
+                    <navigationItem key="navigationItem" id="eVa-q5-eVr"/>
                     <connections>
                         <outlet property="tableView" destination="0Yz-fh-Nub" id="qso-ab-Zdn"/>
                     </connections>
@@ -336,13 +337,6 @@
                                     <constraint firstAttribute="width" constant="374" id="vza-fT-bea"/>
                                 </constraints>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hl4-XN-R9j">
-                                <rect key="frame" x="20" y="733" width="110" height="30"/>
-                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <state key="normal" title="Review Order">
-                                    <color key="titleColor" white="0.95205479449999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6ZE-1q-nFA">
                                 <rect key="frame" x="300" y="684" width="94" height="30"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -351,6 +345,16 @@
                                 </state>
                                 <connections>
                                     <action selector="pressedBackToHomeButton:" destination="CY9-e8-2DA" eventType="touchUpInside" id="5Ae-it-M6g"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hl4-XN-R9j">
+                                <rect key="frame" x="20" y="684" width="92" height="30"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Review Order">
+                                    <color key="titleColor" white="0.95205479449999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <segue destination="8rJ-Kc-sve" kind="show" identifier="GoToReviewSegue" id="euv-g5-Xz9"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -465,7 +469,6 @@
                         <outlet property="popUpView" destination="AJY-Eq-YKt" id="bjJ-hh-RjE"/>
                         <outlet property="popupItemName" destination="xYs-jL-OHG" id="CAC-qJ-YRm"/>
                         <outlet property="quantityLabel" destination="fnR-6p-ylC" id="a5Q-K0-ddN"/>
-                        <outlet property="tableView" destination="2Od-tQ-HBs" id="wFc-ky-gC6"/>
                         <segue destination="49e-Tb-3d3" kind="show" identifier="MainPageSegue" id="0Ne-Sc-VhQ"/>
                         <segue destination="CY9-e8-2DA" kind="show" identifier="ConfirmationPageSegue" id="hgC-PE-FAB"/>
                     </connections>
@@ -484,26 +487,26 @@
                     <rect key="frame" x="0.0" y="0.0" width="343" height="284"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <subviews>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xYs-jL-OHG">
-                            <rect key="frame" x="20" y="153.5" width="42" height="21"/>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xYs-jL-OHG">
+                            <rect key="frame" x="16" y="36" width="311" height="52"/>
                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="NNZ-AN-5Ro">
-                            <rect key="frame" x="229" y="148" width="94" height="32"/>
+                            <rect key="frame" x="204" y="142" width="94" height="32"/>
                             <connections>
                                 <action selector="StepperValueChanged:" destination="E1x-Wz-uhu" eventType="valueChanged" id="fbJ-DF-9lO"/>
                             </connections>
                         </stepper>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fnR-6p-ylC">
-                            <rect key="frame" x="167" y="153.5" width="42" height="21"/>
+                            <rect key="frame" x="99" y="148" width="42" height="21"/>
                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rJH-dz-IOV" customClass="RoundButton" customModule="RoseEats" customModuleProvider="target">
-                            <rect key="frame" x="141.5" y="234" width="60" height="30"/>
+                            <rect key="frame" x="141.5" y="215" width="60" height="30"/>
                             <color key="backgroundColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <constraints>
                                 <constraint firstAttribute="width" constant="60" id="POs-Fc-NdJ"/>
@@ -524,20 +527,22 @@
                                 </userDefinedRuntimeAttribute>
                             </userDefinedRuntimeAttributes>
                             <connections>
-                                <action selector="pressedDone:" destination="E1x-Wz-uhu" eventType="touchUpInside" id="FBo-wg-DXF"/>
+                                <action selector="pressedDone:" destination="E1x-Wz-uhu" eventType="touchUpInside" id="4FL-bg-3YO"/>
                             </connections>
                         </button>
                     </subviews>
                     <color key="backgroundColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>
+                        <constraint firstItem="1Ot-Jf-eT5" firstAttribute="trailing" secondItem="xYs-jL-OHG" secondAttribute="trailing" constant="16" id="9wp-Dw-z2y"/>
                         <constraint firstItem="rJH-dz-IOV" firstAttribute="centerX" secondItem="1Ot-Jf-eT5" secondAttribute="centerX" id="B0K-Mj-6pm"/>
-                        <constraint firstItem="1Ot-Jf-eT5" firstAttribute="trailing" secondItem="NNZ-AN-5Ro" secondAttribute="trailing" constant="20" id="Gl2-Cp-DqA"/>
-                        <constraint firstItem="NNZ-AN-5Ro" firstAttribute="centerY" secondItem="1Ot-Jf-eT5" secondAttribute="centerY" id="HJM-U8-OS7"/>
-                        <constraint firstItem="1Ot-Jf-eT5" firstAttribute="bottom" secondItem="rJH-dz-IOV" secondAttribute="bottom" constant="20" id="HvH-H8-Ard"/>
-                        <constraint firstItem="fnR-6p-ylC" firstAttribute="centerY" secondItem="1Ot-Jf-eT5" secondAttribute="centerY" id="OyC-Ku-VXo"/>
-                        <constraint firstItem="xYs-jL-OHG" firstAttribute="centerY" secondItem="1Ot-Jf-eT5" secondAttribute="centerY" id="qeL-O9-1kc"/>
-                        <constraint firstItem="NNZ-AN-5Ro" firstAttribute="leading" secondItem="fnR-6p-ylC" secondAttribute="trailing" constant="20" id="z69-gd-8rz"/>
-                        <constraint firstItem="xYs-jL-OHG" firstAttribute="leading" secondItem="1Ot-Jf-eT5" secondAttribute="leading" constant="20" id="z6L-tw-mIo"/>
+                        <constraint firstItem="1Ot-Jf-eT5" firstAttribute="trailing" secondItem="NNZ-AN-5Ro" secondAttribute="trailing" constant="45" id="Gl2-Cp-DqA"/>
+                        <constraint firstItem="NNZ-AN-5Ro" firstAttribute="centerY" secondItem="1Ot-Jf-eT5" secondAttribute="centerY" constant="-6" id="HJM-U8-OS7"/>
+                        <constraint firstItem="1Ot-Jf-eT5" firstAttribute="bottom" secondItem="rJH-dz-IOV" secondAttribute="bottom" constant="39" id="HvH-H8-Ard"/>
+                        <constraint firstItem="fnR-6p-ylC" firstAttribute="centerY" secondItem="1Ot-Jf-eT5" secondAttribute="centerY" constant="-5.5" id="OyC-Ku-VXo"/>
+                        <constraint firstItem="xYs-jL-OHG" firstAttribute="leading" secondItem="1Ot-Jf-eT5" secondAttribute="leading" constant="16" id="d0N-db-Sm5"/>
+                        <constraint firstItem="xYs-jL-OHG" firstAttribute="top" secondItem="1Ot-Jf-eT5" secondAttribute="top" constant="-8" id="evF-Up-1CO"/>
+                        <constraint firstItem="xYs-jL-OHG" firstAttribute="centerY" secondItem="1Ot-Jf-eT5" secondAttribute="centerY" constant="-102" id="qeL-O9-1kc"/>
+                        <constraint firstItem="NNZ-AN-5Ro" firstAttribute="leading" secondItem="fnR-6p-ylC" secondAttribute="trailing" constant="63" id="z69-gd-8rz"/>
                     </constraints>
                     <viewLayoutGuide key="safeArea" id="1Ot-Jf-eT5"/>
                 </view>
@@ -593,9 +598,10 @@
         <image name="person" catalog="system" width="64" height="58"/>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="oml-ab-AGJ"/>
         <segue reference="HIp-6U-Hyd"/>
         <segue reference="6eX-GV-D67"/>
-        <segue reference="e1a-Go-cb3"/>
+        <segue reference="euv-g5-Xz9"/>
         <segue reference="pmy-4F-ZHP"/>
     </inferredMetricsTieBreakers>
 </document>

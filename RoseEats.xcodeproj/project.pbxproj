@@ -7,15 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0A2908A4246BA55500E685C5 /* vegetable_soup.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 0A2908A1246BA55500E685C5 /* vegetable_soup.jpg */; };
-		0A2908A5246BA55500E685C5 /* hot_chocolate.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 0A2908A2246BA55500E685C5 /* hot_chocolate.jpg */; };
-		0A2908A7246BA76000E685C5 /* chai_latte.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 0A2908A6246BA76000E685C5 /* chai_latte.jpg */; };
 		0A2908A9246BB5BB00E685C5 /* Order.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A2908A8246BB5BB00E685C5 /* Order.swift */; };
 		0A2908B22471E33300E685C5 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A2908B12471E33300E685C5 /* Constants.swift */; };
 		0A2C0886247114B2001A3C72 /* RoundButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A2C0885247114B2001A3C72 /* RoundButton.swift */; };
 		0A2EAF08246B5BF900A2FE15 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0A2EAF07246B5BF900A2FE15 /* GoogleService-Info.plist */; };
 		0A2EAF0A246B769400A2FE15 /* MenuItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A2EAF09246B769400A2FE15 /* MenuItem.swift */; };
-		0A2EAF0C246BA38A00A2FE15 /* quesadilla.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 0A2EAF0B246BA38A00A2FE15 /* quesadilla.jpg */; };
 		0A30B3502469F561006E3B3B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A30B34F2469F561006E3B3B /* AppDelegate.swift */; };
 		0A30B3522469F562006E3B3B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A30B3512469F562006E3B3B /* SceneDelegate.swift */; };
 		0A30B3542469F562006E3B3B /* MenusPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A30B3532469F562006E3B3B /* MenusPageViewController.swift */; };
@@ -27,7 +23,6 @@
 		0A4E9D602473C6B600B329C2 /* OrderTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A4E9D5F2473C6B600B329C2 /* OrderTableViewController.swift */; };
 		0A4E9D622473CDD100B329C2 /* CustomTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A4E9D612473CDD100B329C2 /* CustomTabBarController.swift */; };
 		0A4E9D642473E14200B329C2 /* CustomNavController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A4E9D632473E14200B329C2 /* CustomNavController.swift */; };
-		0A85A54A246B170100770EA7 /* burger-plain.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 0A85A549246B170100770EA7 /* burger-plain.jpg */; };
 		0A85A54E246B185E00770EA7 /* MenuItemDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A85A54D246B185E00770EA7 /* MenuItemDetailViewController.swift */; };
 		0A85A550246B1BF500770EA7 /* LoginPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A85A54F246B1BF500770EA7 /* LoginPageViewController.swift */; };
 		0A85A552246B201E00770EA7 /* Restaurant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A85A551246B201E00770EA7 /* Restaurant.swift */; };
@@ -37,15 +32,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		0A2908A1246BA55500E685C5 /* vegetable_soup.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = vegetable_soup.jpg; sourceTree = "<group>"; };
-		0A2908A2246BA55500E685C5 /* hot_chocolate.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = hot_chocolate.jpg; sourceTree = "<group>"; };
-		0A2908A6246BA76000E685C5 /* chai_latte.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = chai_latte.jpg; path = ../../../../Downloads/chai_latte.jpg; sourceTree = "<group>"; };
 		0A2908A8246BB5BB00E685C5 /* Order.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Order.swift; sourceTree = "<group>"; };
 		0A2908B12471E33300E685C5 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		0A2C0885247114B2001A3C72 /* RoundButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundButton.swift; sourceTree = "<group>"; };
 		0A2EAF07246B5BF900A2FE15 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "GoogleService-Info.plist"; sourceTree = SOURCE_ROOT; };
 		0A2EAF09246B769400A2FE15 /* MenuItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuItem.swift; sourceTree = "<group>"; };
-		0A2EAF0B246BA38A00A2FE15 /* quesadilla.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = quesadilla.jpg; sourceTree = "<group>"; };
 		0A30B34C2469F561006E3B3B /* RoseEats.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RoseEats.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0A30B34F2469F561006E3B3B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0A30B3512469F562006E3B3B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -59,7 +50,6 @@
 		0A4E9D5F2473C6B600B329C2 /* OrderTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderTableViewController.swift; sourceTree = "<group>"; };
 		0A4E9D612473CDD100B329C2 /* CustomTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBarController.swift; sourceTree = "<group>"; };
 		0A4E9D632473E14200B329C2 /* CustomNavController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomNavController.swift; sourceTree = "<group>"; };
-		0A85A549246B170100770EA7 /* burger-plain.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "burger-plain.jpg"; sourceTree = "<group>"; };
 		0A85A54D246B185E00770EA7 /* MenuItemDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuItemDetailViewController.swift; sourceTree = "<group>"; };
 		0A85A54F246B1BF500770EA7 /* LoginPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPageViewController.swift; sourceTree = "<group>"; };
 		0A85A551246B201E00770EA7 /* Restaurant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Restaurant.swift; sourceTree = "<group>"; };
@@ -122,7 +112,6 @@
 				0AE11D99247A4CBD008E28D6 /* greenCheck.png */,
 				0A2908B02471E32200E685C5 /* Constants */,
 				0A2C088424711482001A3C72 /* Designables */,
-				0A85A54C246B174B00770EA7 /* FoodImagas */,
 				0A85A54B246B174300770EA7 /* Models */,
 				0A30B34F2469F561006E3B3B /* AppDelegate.swift */,
 				0A30B3512469F562006E3B3B /* SceneDelegate.swift */,
@@ -152,18 +141,6 @@
 				0A2908A8246BB5BB00E685C5 /* Order.swift */,
 			);
 			path = Models;
-			sourceTree = "<group>";
-		};
-		0A85A54C246B174B00770EA7 /* FoodImagas */ = {
-			isa = PBXGroup;
-			children = (
-				0A2EAF0B246BA38A00A2FE15 /* quesadilla.jpg */,
-				0A2908A6246BA76000E685C5 /* chai_latte.jpg */,
-				0A2908A2246BA55500E685C5 /* hot_chocolate.jpg */,
-				0A2908A1246BA55500E685C5 /* vegetable_soup.jpg */,
-				0A85A549246B170100770EA7 /* burger-plain.jpg */,
-			);
-			path = FoodImagas;
 			sourceTree = "<group>";
 		};
 		A0630A23BEEF7481813951EB /* Frameworks */ = {
@@ -245,15 +222,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				0AE11D9A247A4CBD008E28D6 /* greenCheck.png in Resources */,
-				0A2EAF0C246BA38A00A2FE15 /* quesadilla.jpg in Resources */,
 				0A30B35E2469F562006E3B3B /* LaunchScreen.storyboard in Resources */,
-				0A2908A5246BA55500E685C5 /* hot_chocolate.jpg in Resources */,
-				0A2908A7246BA76000E685C5 /* chai_latte.jpg in Resources */,
 				0A30B35B2469F562006E3B3B /* Assets.xcassets in Resources */,
 				0A2EAF08246B5BF900A2FE15 /* GoogleService-Info.plist in Resources */,
 				0A30B3592469F562006E3B3B /* Main.storyboard in Resources */,
-				0A2908A4246BA55500E685C5 /* vegetable_soup.jpg in Resources */,
-				0A85A54A246B170100770EA7 /* burger-plain.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -492,7 +464,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "edu.rose-hulman.hayesja1.RoseEats";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -510,7 +482,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "edu.rose-hulman.hayesja1.RoseEats";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

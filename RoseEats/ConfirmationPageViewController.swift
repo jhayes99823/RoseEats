@@ -16,7 +16,7 @@ class ConfirmationPageViewController: UIViewController {
         performSegue(withIdentifier: homeSegueID, sender: self)
     }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == reviewSegueID {
+        if segue.identifier == homeSegueID {
             (segue.destination as! CustomTabBarController).order = Order()
         }
     }

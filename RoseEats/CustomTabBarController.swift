@@ -63,16 +63,9 @@ class CustomTabBarController: UITabBarController,UITabBarControllerDelegate{
                 print("SignOut Error")
             }
         })
-        
-//        alertController.addAction(UIAlertAction(title: "My Account", style: .default) { (action) in
-//            //self.isShowAllMode = !self.isShowAllMode
-//            print("Show My Account")
-//            //self.startListening()
-//        })
              
     
     alertController.addAction(UIAlertAction(title: "Check Cart", style: .default) { (action) in
-            //self.isShowAllMode = !self.isShowAllMode
             print("Check Cart")
             if(self.order == nil){
                 self.order = Order()

@@ -66,6 +66,7 @@ class OrderTableViewController:UITableViewController{
     @IBAction func pressedDone(_ sender: Any) {
         RemovePopup()
     }
+    
     public func Getpopup(text:String, amt: String){
         quantityLabel.text = amt
         popupItemName.text = text
@@ -83,10 +84,13 @@ class OrderTableViewController:UITableViewController{
     
     func editamt(of name:String, to amt:String){
         for item in orders!{
-            if(item.MenuItem == name){
+            print("what in this array rn \(item.MenuItem)")
+            if(item.Name == name){
                 item.Quantity = Int(amt)!
+                print("item qunt after supposed change rn \(item.Quantity)")
             }
         }
+        self.tableView.reloadData()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -155,7 +159,6 @@ class OrderTableViewController:UITableViewController{
         alertController.addAction(cancelAction)
         
         let payAction = UIAlertAction(title: "Check Out", style: .default) { (action) in
-            print("what is the totl cost i'm sendin \(self.costArr[0])")
             self.orderRef.addDocument(data: [
                 "Date": Timestamp.init(),
                 "Restaurant": self.rest!,
@@ -227,9 +230,3 @@ class OrderTableViewController:UITableViewController{
         }
     }
 }
-
-/*extension OrderTableViewController: OrderCellDelegate{
-    func didPressEdit(){
-        
-    }
-}*/
