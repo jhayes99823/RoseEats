@@ -15,29 +15,48 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Login Page" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mVm-WF-Rg5">
-                                <rect key="frame" x="165" y="117" width="85" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please Login to Order" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mVm-WF-Rg5">
+                                <rect key="frame" x="20" y="192" width="374" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tXd-Rd-gGU">
-                                <rect key="frame" x="119" y="317" width="176" height="48"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tXd-Rd-gGU">
+                                <rect key="frame" x="120" y="297.5" width="174" height="30"/>
                                 <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="Login With Rosefire"/>
                                 <connections>
                                     <action selector="pressedRoseFireLogin:" destination="9pv-A4-QxB" eventType="touchUpInside" id="Jfs-8E-gWl"/>
                                 </connections>
                             </button>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uno-LF-axA" customClass="GIDSignInButton">
-                                <rect key="frame" x="119" y="431" width="176" height="69"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome to RoseEats" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CBz-kQ-AEO">
+                                <rect key="frame" x="20" y="106" width="374" height="36"/>
+                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uno-LF-axA" customClass="GIDSignInButton">
+                                <rect key="frame" x="120" y="397.5" width="174" height="71.5"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                             </view>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="uno-LF-axA" firstAttribute="centerX" secondItem="PQr-Ze-W5v" secondAttribute="centerX" id="337-7t-9BN"/>
+                            <constraint firstItem="tXd-Rd-gGU" firstAttribute="leading" secondItem="PQr-Ze-W5v" secondAttribute="leading" constant="120" id="A2X-Ip-RuY"/>
+                            <constraint firstItem="mVm-WF-Rg5" firstAttribute="leading" secondItem="PQr-Ze-W5v" secondAttribute="leading" constant="20" id="ASN-eq-BiJ"/>
+                            <constraint firstItem="PQr-Ze-W5v" firstAttribute="trailing" secondItem="CBz-kQ-AEO" secondAttribute="trailing" constant="20" id="Prw-Tz-fgr"/>
+                            <constraint firstItem="mVm-WF-Rg5" firstAttribute="top" secondItem="CBz-kQ-AEO" secondAttribute="bottom" constant="50" id="QEz-eJ-hlr"/>
+                            <constraint firstItem="CBz-kQ-AEO" firstAttribute="top" secondItem="PQr-Ze-W5v" secondAttribute="top" constant="50" id="VGb-F9-xfW"/>
+                            <constraint firstItem="PQr-Ze-W5v" firstAttribute="bottom" secondItem="uno-LF-axA" secondAttribute="bottom" constant="339" id="YAw-K8-2id"/>
+                            <constraint firstItem="CBz-kQ-AEO" firstAttribute="leading" secondItem="PQr-Ze-W5v" secondAttribute="leading" constant="20" id="eOY-HH-RL7"/>
+                            <constraint firstItem="tXd-Rd-gGU" firstAttribute="top" secondItem="mVm-WF-Rg5" secondAttribute="bottom" constant="85" id="fB8-0E-ycG"/>
+                            <constraint firstItem="PQr-Ze-W5v" firstAttribute="trailing" secondItem="uno-LF-axA" secondAttribute="trailing" constant="120" id="hOv-9Q-OZO"/>
+                            <constraint firstItem="uno-LF-axA" firstAttribute="top" secondItem="tXd-Rd-gGU" secondAttribute="bottom" constant="70" id="i1n-mF-I7E"/>
+                            <constraint firstItem="PQr-Ze-W5v" firstAttribute="trailing" secondItem="mVm-WF-Rg5" secondAttribute="trailing" constant="20" id="pNF-8g-Nkx"/>
+                            <constraint firstItem="PQr-Ze-W5v" firstAttribute="trailing" secondItem="tXd-Rd-gGU" secondAttribute="trailing" constant="120" id="rNc-gu-FpR"/>
+                            <constraint firstItem="uno-LF-axA" firstAttribute="leading" secondItem="PQr-Ze-W5v" secondAttribute="leading" constant="120" id="z21-55-4PW"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="PQr-Ze-W5v"/>
                     </view>
                     <navigationItem key="navigationItem" id="XJU-N9-svx"/>
@@ -47,7 +66,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-814" y="754"/>
+            <point key="canvasLocation" x="-814.49275362318849" y="753.34821428571422"/>
         </scene>
         <!--Menus-->
         <scene sceneID="bFe-ur-9pF">
@@ -227,7 +246,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="0Yz-fh-Nub">
-                                <rect key="frame" x="20" y="215" width="374" height="406"/>
+                                <rect key="frame" x="20" y="271" width="374" height="350"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <color key="sectionIndexBackgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <prototypes>
@@ -279,7 +298,7 @@
                                 </prototypes>
                             </tableView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Previous Orders" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cgC-JB-57A">
-                                <rect key="frame" x="20" y="86" width="374" height="53"/>
+                                <rect key="frame" x="20" y="142" width="374" height="53"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="44"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -318,19 +337,19 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Order Being Prepared Now" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xQJ-8L-oM8">
-                                <rect key="frame" x="20" y="20" width="374" height="26.5"/>
+                                <rect key="frame" x="20" y="76" width="374" height="26.5"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lzb-56-kfO">
-                                <rect key="frame" x="20" y="66.5" width="374" height="24"/>
+                                <rect key="frame" x="20" y="122.5" width="374" height="24"/>
                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="greenCheck.png" translatesAutoresizingMaskIntoConstraints="NO" id="0s9-za-lSk">
-                                <rect key="frame" x="20" y="204" width="374" height="400"/>
+                                <rect key="frame" x="20" y="232" width="374" height="400"/>
                                 <color key="backgroundColor" red="0.96862745100000003" green="0.96862745100000003" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="400" id="3sm-Kn-kVL"/>
@@ -338,7 +357,7 @@
                                 </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6ZE-1q-nFA">
-                                <rect key="frame" x="300" y="684" width="94" height="30"/>
+                                <rect key="frame" x="300" y="712" width="94" height="30"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Back to Menu">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -348,7 +367,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hl4-XN-R9j">
-                                <rect key="frame" x="20" y="684" width="92" height="30"/>
+                                <rect key="frame" x="20" y="712" width="92" height="30"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Review Order">
                                     <color key="titleColor" white="0.95205479449999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -599,8 +618,8 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="oml-ab-AGJ"/>
-        <segue reference="HIp-6U-Hyd"/>
-        <segue reference="6eX-GV-D67"/>
+        <segue reference="AaH-qu-wLk"/>
+        <segue reference="ep1-oZ-6J0"/>
         <segue reference="euv-g5-Xz9"/>
         <segue reference="pmy-4F-ZHP"/>
     </inferredMetricsTieBreakers>
