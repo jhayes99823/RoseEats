@@ -203,6 +203,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="jcp-fl-h4v"/>
                     <connections>
+                        <outlet property="ImageView" destination="K7r-6Z-6Ah" id="Lnm-3x-Ql0"/>
                         <outlet property="addToCartButton" destination="LFM-CR-jqm" id="jsn-r5-FSL"/>
                         <outlet property="imageView" destination="K7r-6Z-6Ah" id="h0U-4m-tu1"/>
                         <outlet property="pageTitle" destination="3le-lB-Er7" id="M3N-HM-VWs"/>
@@ -349,7 +350,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <segue destination="Gwb-TN-uqN" kind="show" identifier="GoHomeSegue" id="Iuq-cb-Mba"/>
+                                    <action selector="pressedBackToHomeButton:" destination="CY9-e8-2DA" eventType="touchUpInside" id="5Ae-it-M6g"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -373,10 +374,13 @@
                         <viewLayoutGuide key="safeArea" id="LlO-ci-94T"/>
                     </view>
                     <navigationItem key="navigationItem" id="i77-FD-tqV"/>
+                    <connections>
+                        <segue destination="49e-Tb-3d3" kind="show" identifier="GoHomeSegue" id="Ibj-oa-4We"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BRb-vX-3ru" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2665.217391304348" y="822.99107142857144"/>
+            <point key="canvasLocation" x="-2772" y="1404"/>
         </scene>
         <!--Order Table View Controller-->
         <scene sceneID="OVJ-s3-J1u">
@@ -591,7 +595,7 @@
     <inferredMetricsTieBreakers>
         <segue reference="HIp-6U-Hyd"/>
         <segue reference="6eX-GV-D67"/>
-        <segue reference="Iuq-cb-Mba"/>
+        <segue reference="e1a-Go-cb3"/>
         <segue reference="pmy-4F-ZHP"/>
     </inferredMetricsTieBreakers>
 </document>

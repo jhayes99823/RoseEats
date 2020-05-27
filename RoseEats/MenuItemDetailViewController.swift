@@ -64,12 +64,27 @@ class MenuItemDetailViewController: UIViewController {
         addToCartButton.layer.borderColor = UIColor.black.cgColor
         quantityStepper.autorepeat = true
         quantityStepper.minimumValue = 1
+        if let imgString = self.menuItem!.ImageName {
+                    if let imgUrl = URL(string: imgString) {
+                      DispatchQueue.global().async { // Download in the background
+                        do {
+                          let data = try Data(contentsOf: imgUrl)
+                          DispatchQueue.main.async { // Then update on main thread
+                            self.imageView.image = UIImage(data: data)
+                          }
+                        } catch {
+                          print("Error downloading image: \(error)")
+                        }
+                      }
+                    }
+        
+                  }
         updateView()
     }
     
     func updateView() {
         pageTitle.text = menuItem?.Name
-        imageView.image = UIImage(named: menuItem!.ImageName)
+        //imageView.image = UIImage(named: menuItem!.ImageName)
     }
     
     func existsinOrder(MenutemName: String) -> Int{
@@ -85,18 +100,6 @@ class MenuItemDetailViewController: UIViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == menuDetailpageSegue {
-            if(orders == nil){
-                var orderItems = [OrderItem]()
-                orderItems.append(OrderItem(MenuItem: menuItem!.id, Quantity: Int(quantityLabel.text!)!, Name: menuItem!.Name))
-                orders = Order(Restaurant: currentRest!, User: Auth.auth().currentUser!.uid, Items: orderItems)
-            }else{
-                let i = existsinOrder(MenutemName: menuItem!.Name)
-                if(i != -1){
-                    orders!.Items[i].Quantity = Int(quantityLabel.text!)!
-                }else{
-                    orders!.Items.append(OrderItem(MenuItem: menuItem!.id, Quantity: Int(quantityLabel.text!)!, Name: menuItem!.Name))
-                }
-            }
             (segue.destination as! CustomTabBarController).order = orders!
             //(segue.destination as! MenuPageContentViewController).strTitle = currentRest!
         } else if (segue.identifier == reviewOrderSegue) {

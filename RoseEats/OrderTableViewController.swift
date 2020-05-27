@@ -57,7 +57,7 @@ class OrderTableViewController:UITableViewController{
             _ = menuItemRef.document(orderitem.MenuItem).getDocument {
                 (document, error ) in if let document = document, document.exists {
                     self.costArr.removeAll()
-                    self.costArr.append((document.data()!["Price"] as! Float) * Float(orderitem.Quantity))
+                    self.costArr.append(Float((document.data()!["Price"] as! Double) * Double(orderitem.Quantity)))
                 }
             }
         }
@@ -94,12 +94,10 @@ class OrderTableViewController:UITableViewController{
         QuantityStepper.autorepeat = true
         QuantityStepper.minimumValue = 1
         self.tableView.rowHeight = 55
-        print("view will appear")
     }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        print("view did appear")
     }
     
     override func viewDidLoad() {
@@ -117,13 +115,19 @@ class OrderTableViewController:UITableViewController{
     }
     
     @objc func showMenu() {
-        let alertController = UIAlertController(title: nil, message: nil, preferredStyle: .alert)
+        let alertController = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
+        
+        
+        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+        alertController.addAction(cancelAction)
         
         let checkoutAction = UIAlertAction(title: "Check Out", style: .default) { (action) in
             self.showCheckoutDialog()
         }
         
         alertController.addAction(checkoutAction)
+        
+
         
         present(alertController, animated: true, completion: nil)
     }
