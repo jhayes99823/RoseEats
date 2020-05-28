@@ -24,7 +24,9 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tXd-Rd-gGU">
                                 <rect key="frame" x="120" y="297.5" width="174" height="30"/>
                                 <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <state key="normal" title="Login With Rosefire"/>
+                                <state key="normal" title="Login With Rosefire">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
                                 <connections>
                                     <action selector="pressedRoseFireLogin:" destination="9pv-A4-QxB" eventType="touchUpInside" id="Jfs-8E-gWl"/>
                                 </connections>
