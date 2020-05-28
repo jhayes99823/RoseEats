@@ -7,10 +7,21 @@
 //
 
 import UIKit
+import Firebase
 
 class ConfirmationPageViewController: UIViewController {
     var reviewSegueID = "GoToReviewSegue"
     var homeSegueID = "GoHomeSegue"
+
+    var pickUpRest: String!
+    
+    @IBOutlet weak var extraInfoLabell: UILabel!
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+       extraInfoLabell.text! = "Head to \(pickUpRest!) in 15 minutes to pick up your order. \nEnjoy your meal!"
+    }
     
     @IBAction func pressedBackToHomeButton(_ sender: Any) {
         performSegue(withIdentifier: homeSegueID, sender: self)

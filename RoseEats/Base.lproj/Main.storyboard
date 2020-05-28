@@ -398,6 +398,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="i77-FD-tqV"/>
                     <connections>
+                        <outlet property="extraInfoLabell" destination="lzb-56-kfO" id="cnD-Xs-aa9"/>
                         <segue destination="49e-Tb-3d3" kind="show" identifier="GoHomeSegue" id="Ibj-oa-4We"/>
                     </connections>
                 </viewController>

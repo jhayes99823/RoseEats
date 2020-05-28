@@ -84,12 +84,11 @@ class OrderTableViewController:UITableViewController{
     
     func editamt(of name:String, to amt:String){
         for item in orders!{
-            print("what in this array rn \(item.MenuItem)")
             if(item.Name == name){
                 item.Quantity = Int(amt)!
-                print("item qunt after supposed change rn \(item.Quantity)")
             }
         }
+        getCostArr()
         self.tableView.reloadData()
     }
     
@@ -115,7 +114,7 @@ class OrderTableViewController:UITableViewController{
         navigationItem.hidesBackButton = true
         navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Back", style: .plain, target: self, action: #selector((backButtonPressed)))
        print("view did load")
-        getCostArr()
+       getCostArr()
     }
     
     @objc func showMenu() {
@@ -227,6 +226,8 @@ class OrderTableViewController:UITableViewController{
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == mainPageSegue {
             (segue.destination as! CustomTabBarController).order = Order(Restaurant: rest!, User: User!, Items: orders!)
+        } else if segue.identifier == confirmationPageSegueID {
+            (segue.destination as! ConfirmationPageViewController).pickUpRest = rest!
         }
     }
 }
